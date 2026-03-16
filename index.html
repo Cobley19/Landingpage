@@ -469,7 +469,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
         </div>
         <div class="how-step" onclick="setStep(2)">
           <div class="step-num">3</div>
-          <div><div class="step-title">You run open homes guided by our platform</div><div class="step-desc">Buyers get to meet the people who actually lived in the home. Our platform gives you check-in tools, a live enquiry inbox and AI-guided responses. You always know what to say, and when to hand off to your agent.</div></div>
+          <div><div class="step-title">You run open homes guided by our platform</div><div class="step-desc">You open the door and welcome buyers in. The platform logs every visitor automatically via the check-in app. All buyer communication outside the inspection enquiries, follow-ups, questions is handled by your licensed agent.</div></div>
         </div>
         <div class="how-step" onclick="setStep(3)">
           <div class="step-num">4</div>
@@ -481,25 +481,30 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
         </div>
         <div class="split-card">
           <div class="split-lbl">Responsibility Split</div>
-          <div class="split-cols">
+          <div class="split-cols" style="grid-template-columns:1fr 1fr 1fr;">
             <div class="split-col sc-you">
-              <div class="split-col-hd">You Handle</div>
-              <div class="si-item"><span>🏠</span>Open homes</div>
-              <div class="si-item"><span>💬</span>Buyer enquiries</div>
-              <div class="si-item"><span>📅</span>Inspection scheduling</div>
-              <div class="si-item"><span>📲</span>Buyer check-ins</div>
+              <div class="split-col-hd">Owner</div>
+              <div class="si-item"><span>🏠</span>Host open homes</div>
               <div class="si-item"><span>📸</span>Property access</div>
+              <div class="si-item"><span>👋</span>Greet buyers at inspections</div>
+              <div class="si-item"><span>📲</span>Check-ins on arrival</div>
             </div>
             <div class="split-col sc-us">
-              <div class="split-col-hd">We Handle</div>
-              <div class="si-item"><span>📋</span>Listing & marketing</div>
-              <div class="si-item"><span>📝</span>Contracts & paperwork</div>
-              <div class="si-item"><span>💰</span>All negotiations</div>
-              <div class="si-item"><span>✦</span>AI guidance platform</div>
-              <div class="si-item"><span>🏦</span>Settlement</div>
+              <div class="split-col-hd">Licensed Agent</div>
+              <div class="si-item"><span>💬</span>All buyer communication</div>
+              <div class="si-item"><span>💰</span>Offers and negotiation</div>
+              <div class="si-item"><span>📝</span>Contracts and paperwork</div>
+              <div class="si-item"><span>🏦</span>Sale and settlement</div>
+            </div>
+            <div class="split-col" style="border-left:1px solid rgba(255,255,255,0.07);padding-left:12px;">
+              <div class="split-col-hd" style="color:rgba(255,255,255,0.5);">Platform</div>
+              <div class="si-item" style="color:rgba(255,255,255,0.65);"><span>📋</span>Listing and marketing</div>
+              <div class="si-item" style="color:rgba(255,255,255,0.65);"><span>📅</span>Inspection scheduling</div>
+              <div class="si-item" style="color:rgba(255,255,255,0.65);"><span>📊</span>Campaign tracking</div>
+              <div class="si-item" style="color:rgba(255,255,255,0.65);"><span>✦</span>AI guidance</div>
             </div>
           </div>
-          <div class="split-note"><strong>Important:</strong> Propel RE is your licensed agent throughout. You're supported at every step. Never alone.</div>
+          <div class="split-note"><strong>The platform is infrastructure.</strong> The licensed agent is responsible for the transaction. The owner opens the door.</div>
         </div>
       </div>
 
@@ -667,22 +672,21 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
     <p class="sub reveal">Before your campaign goes live, you'll complete a simple owner's guide with your Propel RE agent. It covers what you can do, what to hand to your agent, and how to handle common buyer questions with confidence.</p>
     <div class="conduct-grid">
       <div class="ccard can reveal">
-        <div class="ccard-title"><span style="color:var(--teal)">✦</span> You're great at</div>
-        <div class="citem"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">✓</span>Showing buyers through your home and answering questions about it</div>
-        <div class="citem"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">✓</span>Sharing the story of the home renovations, features, the neighbourhood</div>
-        <div class="citem"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">✓</span>Welcoming buyers warmly and making them feel at home</div>
-        <div class="citem"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">✓</span>Registering buyers via the check-in app on arrival</div>
-        <div class="citem"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">✓</span>Saying "speak with our agent" for anything about price or offers</div>
+        <div class="ccard-title"><span style="color:var(--teal)">✦</span> Your role as owner</div>
+        <div class="citem"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">✓</span>Host open homes and give buyers access to the property</div>
+        <div class="citem"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">✓</span>Welcome buyers warmly and walk them through at their pace</div>
+        <div class="citem"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">✓</span>Register buyers on arrival using the check-in app</div>
+        <div class="citem"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">✓</span>Answer factual questions about the property, features, renovations, the street</div>
+        <div class="citem"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">✓</span>Direct everything else to your agent price, offers, next steps</div>
       </div>
       <div class="ccard cant reveal d1">
-        <div class="ccard-title"><span style="opacity:.35">○</span> Hand to your agent</div>
-        <div class="citem"><span style="opacity:.3;font-size:14px;flex-shrink:0;">→</span>Any questions about price, offers or what you'd accept</div>
+        <div class="ccard-title"><span style="opacity:.35">○</span> Your agent handles everything else</div>
+        <div class="citem"><span style="opacity:.3;font-size:14px;flex-shrink:0;">→</span>All buyer enquiries and follow-up outside the inspection</div>
+        <div class="citem"><span style="opacity:.3;font-size:14px;flex-shrink:0;">→</span>Price, offers and negotiation of any kind</div>
         <div class="citem"><span style="opacity:.3;font-size:14px;flex-shrink:0;">→</span>Whether there are other offers on the table</div>
-        <div class="citem"><span style="opacity:.3;font-size:14px;flex-shrink:0;">→</span>Contract terms, settlement dates or conditions</div>
-        <div class="citem"><span style="opacity:.3;font-size:14px;flex-shrink:0;">→</span>Anything you're not 100% sure about always fine to say "I'll check with our agent"</div>
-        <div class="citem"><span style="opacity:.3;font-size:14px;flex-shrink:0;">→</span>Formal negotiations of any kind</div>
+        <div class="citem"><span style="opacity:.3;font-size:14px;flex-shrink:0;">→</span>Contract terms, settlement dates and conditions</div>
+        <div class="citem"><span style="opacity:.3;font-size:14px;flex-shrink:0;">→</span>All negotiations from first offer through to exchange</div>
       </div>
-    </div>
     <div class="conduct-note reveal">
       <div class="cn-ico">💬</div>
       <div>
