@@ -389,6 +389,42 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
 .hf-val{font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:#5dd6cc;line-height:1;margin-bottom:4px;}
 .hf-lbl{font-size:12px;color:rgba(255,255,255,0.5);}
 .hf-divider{width:1px;height:36px;background:rgba(255,255,255,0.1);margin:0 24px;}
+
+.hv-costs{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);border-radius:9px;overflow:hidden;margin-bottom:12px;}
+.hv-costs-hd{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.4);padding:9px 13px;border-bottom:1px solid rgba(255,255,255,0.07);}
+.hv-cost-item{display:flex;justify-content:space-between;align-items:center;padding:7px 13px;border-bottom:1px solid rgba(255,255,255,0.05);font-size:12px;}
+.hv-cost-label{color:rgba(255,255,255,0.65);}
+.hv-cost-val{color:rgba(255,255,255,0.45);font-size:11px;}
+.hv-cost-total{display:flex;justify-content:space-between;align-items:center;padding:9px 13px;font-size:12px;font-weight:600;color:#fff;background:rgba(255,255,255,0.06);}
+.hv-saving-row{background:rgba(42,122,114,0.12);border:1px solid rgba(42,122,114,0.25);border-radius:9px;padding:13px 14px;}
+.hv-saving-label{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-light);margin-bottom:10px;}
+.hv-saving-compare{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+.hv-saving-col{flex:1;}
+.hv-saving-name{font-size:10px;color:rgba(255,255,255,0.45);margin-bottom:3px;}
+.hv-saving-num{font-family:'Fraunces',serif;font-size:18px;font-weight:700;}
+.hv-saving-num.muted{color:rgba(255,255,255,0.35);text-decoration:line-through;}
+.hv-saving-num.bright{color:#5dd6cc;}
+.hv-saving-arrow{font-size:14px;color:rgba(255,255,255,0.25);flex-shrink:0;}
+.hv-saving-result{font-size:12px;color:rgba(255,255,255,0.7);border-top:1px solid rgba(255,255,255,0.08);padding-top:9px;}
+.hv-saving-result strong{color:#5dd6cc;}
+
+.saving-section{background:var(--navy);padding:64px 48px;}
+.saving-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.saving-eyebrow{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--teal-light);margin-bottom:10px;}
+.saving-h{font-family:'Fraunces',serif;font-size:36px;font-weight:600;color:#fff;margin-bottom:10px;letter-spacing:-0.5px;}
+.saving-sub{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.65;max-width:320px;}
+.saving-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;overflow:hidden;}
+.saving-row{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:24px 28px;gap:16px;border-bottom:1px solid rgba(255,255,255,0.08);}
+.saving-col-label{font-size:11px;color:rgba(255,255,255,0.45);margin-bottom:6px;}
+.saving-col-num{font-family:'Fraunces',serif;font-size:28px;font-weight:700;color:#fff;}
+.saving-col-num.crossed{color:rgba(255,255,255,0.3);text-decoration:line-through;}
+.saving-col-num.green{color:#5dd6cc;}
+.saving-vs{font-size:11px;font-weight:600;color:rgba(255,255,255,0.25);letter-spacing:1px;text-transform:uppercase;}
+.saving-result{display:flex;align-items:baseline;gap:10px;padding:18px 28px;background:rgba(42,122,114,0.12);}
+.saving-result-label{font-size:12px;color:rgba(255,255,255,0.45);}
+.saving-result-num{font-family:'Fraunces',serif;font-size:32px;font-weight:700;color:#5dd6cc;}
+.saving-result-sub{font-size:12px;color:rgba(255,255,255,0.45);}
+@media(max-width:900px){.saving-inner{grid-template-columns:1fr;}.saving-section{padding:60px 20px;}}
 </style>
 </head>
 <body>
@@ -593,12 +629,13 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
           <div class="hv-card">
             <div class="hv-label">Step 2</div>
             <div class="hv-title">Campaign Launch</div>
-            <div class="hv-portals">
+
+            <div class="hv-portals" style="margin-bottom:16px;">
               <div class="hv-portal rea">
                 <div class="hv-portal-logo">R</div>
                 <div>
                   <div class="hv-portal-name">realestate.com.au</div>
-                  <div class="hv-portal-status">Premier listing · Live</div>
+                  <div class="hv-portal-status">Premier listing</div>
                 </div>
                 <div class="hv-live-dot"></div>
               </div>
@@ -606,12 +643,37 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
                 <div class="hv-portal-logo">D</div>
                 <div>
                   <div class="hv-portal-name">domain.com.au</div>
-                  <div class="hv-portal-status">Standard listing · Live</div>
+                  <div class="hv-portal-status">Standard listing</div>
                 </div>
                 <div class="hv-live-dot"></div>
               </div>
             </div>
-            <div class="hv-note">Photography, copy and portals — all handled by Propel RE before anything goes public.</div>
+
+            <div class="hv-costs">
+              <div class="hv-costs-hd">Marketing costs — paid by you directly</div>
+              <div class="hv-cost-item">
+                <span class="hv-cost-label">Photography and floor plan</span>
+                <span class="hv-cost-val">$400–800</span>
+              </div>
+              <div class="hv-cost-item">
+                <span class="hv-cost-label">REA Premier listing</span>
+                <span class="hv-cost-val">$800–1,500</span>
+              </div>
+              <div class="hv-cost-item">
+                <span class="hv-cost-label">Domain listing</span>
+                <span class="hv-cost-val">$200–400</span>
+              </div>
+              <div class="hv-cost-item">
+                <span class="hv-cost-label">Signboard</span>
+                <span class="hv-cost-val">$150–300</span>
+              </div>
+              <div class="hv-cost-total">
+                <span>Typical total</span>
+                <span>$1,500–3,000</span>
+              </div>
+            </div>
+
+
           </div>
         </div>
 
@@ -672,6 +734,35 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
 </section>
 
 <!-- PLATFORM -->
+<!-- SAVING SECTION -->
+<div class="saving-section">
+  <div class="saving-inner">
+    <div class="saving-left">
+      <div class="saving-eyebrow">Example saving</div>
+      <div class="saving-h">On a $1.3M sale</div>
+      <div class="saving-sub">Commission is the only variable. Marketing costs are the same regardless of who you sell with.</div>
+    </div>
+    <div class="saving-card">
+      <div class="saving-row">
+        <div class="saving-col">
+          <div class="saving-col-label">Traditional agent @ 2.5%</div>
+          <div class="saving-col-num crossed">$32,500</div>
+        </div>
+        <div class="saving-vs">vs</div>
+        <div class="saving-col">
+          <div class="saving-col-label">Propel RE @ 1.1%</div>
+          <div class="saving-col-num green">$14,300</div>
+        </div>
+      </div>
+      <div class="saving-result">
+        <div class="saving-result-label">You keep</div>
+        <div class="saving-result-num">$18,200</div>
+        <div class="saving-result-sub">for your work.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <section class="platform" id="platform">
   <div class="si">
     <div class="plat-top">
