@@ -3,433 +3,219 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Propel RE Your Campaign. Our Expertise.</title>
+<title>Propel RE &mdash; Your Campaign. Our Expertise.</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0d1f3c;--navy-mid:#162d52;--teal:#2a7a72;--teal-light:#3a9990;--teal-pale:rgba(42,122,114,0.08);--off:#f7f4ef;--off-dark:#ede9e1;--white:#ffffff;--ink:#0e0e0e;--ink-60:rgba(14,14,14,0.6);--ink-30:rgba(14,14,14,0.25);--border:rgba(14,14,14,0.09);--border-navy:rgba(255,255,255,0.09);--sage:#3a5c3e;}
+:root{--navy:#0d1f3c;--teal:#2a7a72;--teal-light:#3a9990;--teal-pale:rgba(42,122,114,0.08);--off:#f7f4ef;--white:#ffffff;--ink:#0e0e0e;--ink-60:rgba(14,14,14,0.6);--ink-30:rgba(14,14,14,0.25);--border:rgba(14,14,14,0.09);}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'Epilogue',sans-serif;background:var(--off);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
 
 /* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 48px;height:64px;display:flex;align-items:center;justify-content:space-between;background:rgba(13,31,60,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border-navy);}
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 48px;height:64px;display:flex;align-items:center;justify-content:space-between;background:rgba(13,31,60,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.07);}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
 .nav-logo-mark{width:30px;height:30px;background:var(--teal);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:15px;font-weight:700;color:#fff;}
 .nav-logo-name{font-family:'Fraunces',serif;font-size:17px;font-weight:600;color:#fff;}
-.nav-logo-name em{font-style:italic;font-weight:300;color:rgba(255,255,255,0.5);}
+.nav-logo-name em{font-style:italic;font-weight:300;color:rgba(255,255,255,0.45);}
 .nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
-.nav-links a{font-size:13px;color:rgba(255,255,255,0.55);text-decoration:none;transition:color .15s;}
+.nav-links a{font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color .15s;}
 .nav-links a:hover{color:#fff;}
-.nav-cta{display:inline-flex;align-items:center;gap:6px;padding:9px 18px;background:var(--teal);color:#fff;font-family:'Epilogue',sans-serif;font-size:13px;font-weight:600;border-radius:6px;border:none;cursor:pointer;text-decoration:none;transition:background .15s;}
+.nav-cta{display:inline-flex;align-items:center;padding:9px 18px;background:var(--teal);color:#fff;font-family:'Epilogue',sans-serif;font-size:13px;font-weight:600;border-radius:6px;border:none;cursor:pointer;text-decoration:none;transition:background .15s;}
 .nav-cta:hover{background:var(--teal-light);}
 
 /* HERO */
-.hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;position:relative;overflow:hidden;padding:100px 48px 60px;}
-.hero-orb{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;}
-.hero-orb.o1{width:600px;height:600px;background:rgba(42,122,114,0.11);right:-100px;top:-120px;}
-.hero-orb.o2{width:400px;height:400px;background:rgba(30,58,106,0.5);left:-80px;bottom:-80px;}
-.hero-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:64px 64px;}
-.hero-arch{position:absolute;right:0;top:0;bottom:0;width:50%;opacity:0.055;pointer-events:none;}
+.hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;position:relative;overflow:hidden;padding:100px 48px 64px;}
+.hero-orb{position:absolute;border-radius:50%;pointer-events:none;}
+.hero-orb.o1{width:600px;height:600px;background:rgba(42,122,114,0.09);right:-100px;top:-120px;filter:blur(90px);}
+.hero-orb.o2{width:400px;height:400px;background:rgba(30,58,106,0.45);left:-80px;bottom:-80px;filter:blur(90px);}
+.hero-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,0.016) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.016) 1px,transparent 1px);background-size:64px 64px;}
 .hero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 400px;gap:72px;align-items:center;}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--teal-light);margin-bottom:22px;}
-.hero-dot{width:6px;height:6px;background:var(--teal);border-radius:50%;animation:blink 2s infinite;}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
+.hero-dot{width:6px;height:6px;background:var(--teal);border-radius:50%;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
 .hero-h1{font-family:'Fraunces',serif;font-size:clamp(44px,5vw,72px);font-weight:600;line-height:1.08;letter-spacing:-1.5px;color:#fff;margin-bottom:22px;}
-.hero-h1 em{font-style:italic;font-weight:300;color:rgba(255,255,255,0.45);}
-.hero-sub{font-size:17px;font-weight:300;line-height:1.7;color:rgba(255,255,255,0.82);max-width:510px;margin-bottom:28px;}
-.hero-sub strong{color:rgba(255,255,255,0.82);font-weight:500;}
-.hero-actions{display:flex;gap:12px;align-items:center;margin-bottom:24px;}
-.btn-hero-p{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;background:var(--teal);color:#fff;font-family:'Epilogue',sans-serif;font-size:14px;font-weight:600;border-radius:7px;border:none;cursor:pointer;text-decoration:none;transition:all .15s;}
-.btn-hero-p:hover{background:var(--teal-light);transform:translateY(-1px);}
-.btn-hero-g{display:inline-flex;align-items:center;padding:14px 22px;background:transparent;color:rgba(255,255,255,0.65);font-family:'Epilogue',sans-serif;font-size:14px;border-radius:7px;border:1px solid rgba(255,255,255,0.14);cursor:pointer;text-decoration:none;transition:all .15s;}
-.btn-hero-g:hover{border-color:rgba(255,255,255,0.38);color:#fff;}
-.hero-stats{display:flex;border:1px solid rgba(255,255,255,0.08);border-radius:10px;overflow:hidden;}
-.hs{flex:1;padding:16px 20px;border-right:1px solid rgba(255,255,255,0.07);}
-.hs:last-child{border-right:none;}
-.hs-val{font-family:'Fraunces',serif;font-size:26px;font-weight:700;color:var(--teal-light);line-height:1;margin-bottom:4px;}
-.hs-lbl{font-size:11px;color:rgba(255,255,255,0.65);line-height:1.4;}
+.hero-h1 em{font-style:italic;font-weight:300;color:rgba(255,255,255,0.42);}
+.hero-sub{font-size:17px;font-weight:300;line-height:1.7;color:rgba(255,255,255,0.78);max-width:510px;margin-bottom:28px;}
+.hero-sub strong{color:#fff;font-weight:500;}
+.hero-actions{display:flex;gap:12px;align-items:center;margin-bottom:28px;}
+.btn-p{display:inline-flex;align-items:center;padding:14px 26px;background:var(--teal);color:#fff;font-family:'Epilogue',sans-serif;font-size:14px;font-weight:600;border-radius:7px;border:none;cursor:pointer;text-decoration:none;transition:all .15s;}
+.btn-p:hover{background:var(--teal-light);}
+.btn-g{display:inline-flex;align-items:center;padding:14px 22px;background:transparent;color:rgba(255,255,255,0.6);font-family:'Epilogue',sans-serif;font-size:14px;border-radius:7px;border:1px solid rgba(255,255,255,0.14);cursor:pointer;text-decoration:none;transition:all .15s;}
+.btn-g:hover{border-color:rgba(255,255,255,0.35);color:#fff;}
+.hero-facts{display:flex;align-items:center;padding-top:22px;border-top:1px solid rgba(255,255,255,0.09);}
+.hf-item{flex:1;}
+.hf-val{font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:#5dd6cc;line-height:1;margin-bottom:4px;}
+.hf-lbl{font-size:12px;color:rgba(255,255,255,0.45);}
+.hf-div{width:1px;height:36px;background:rgba(255,255,255,0.09);margin:0 24px;}
 
-/* HERO APP CARD */
-.hcard{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;animation:rise .7s ease both .2s;}
-@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-.hcard-bar{background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.07);padding:12px 16px;display:flex;align-items:center;gap:8px;}
-.hcard-dots{display:flex;gap:4px;}
-.hcard-dot{width:8px;height:8px;border-radius:50%;}
-.hcard-lbl{font-size:11px;color:rgba(255,255,255,0.28);margin-left:4px;}
-.hcard-body{padding:16px;}
-.hcard-prog{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:13px 15px;margin-bottom:10px;}
-.hcard-pm{display:flex;justify-content:space-between;font-size:11px;margin-bottom:7px;}
-.hcard-pm span:first-child{color:rgba(255,255,255,0.4);}
-.hcard-pm span:last-child{color:var(--teal-light);font-weight:600;}
-.hcard-trk{height:4px;background:rgba(255,255,255,0.07);border-radius:2px;overflow:hidden;}
-.hcard-fill{height:100%;width:43%;background:linear-gradient(90deg,var(--teal),var(--teal-light));}
-.hcard-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:10px;}
-.hcard-st{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:7px;padding:10px;text-align:center;}
-.hcard-sv{font-family:'Fraunces',serif;font-size:20px;font-weight:700;color:#fff;line-height:1;}
-.hcard-sl{font-size:10px;color:rgba(255,255,255,0.28);margin-top:2px;}
-.hcard-enq{margin-bottom:10px;}
-.hcard-enq-hd{font-size:10px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:7px;}
-.hcard-msg{display:flex;align-items:flex-start;gap:8px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.04);}
-.hcard-msg:last-child{border-bottom:none;}
-.hcard-av{width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:rgba(255,255,255,0.5);flex-shrink:0;}
-.hcard-mn{font-size:11px;font-weight:600;color:rgba(255,255,255,0.7);}
-.hcard-mp{font-size:10px;color:rgba(255,255,255,0.28);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:220px;}
-.hcard-unread{width:6px;height:6px;background:var(--teal);border-radius:50%;margin-left:auto;flex-shrink:0;margin-top:4px;}
-.hcard-ai{background:rgba(42,122,114,0.1);border:1px solid rgba(42,122,114,0.18);border-radius:8px;padding:12px 13px;}
-.hcard-ai-hd{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-light);margin-bottom:5px;}
-.hcard-ai-txt{font-size:12px;color:rgba(255,255,255,0.42);line-height:1.5;}
+/* HERO CARD */
+.shc{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:14px;padding:22px;}
+.shc-label{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:16px;}
+.shc-row{display:flex;align-items:flex-start;gap:13px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);border-radius:10px;padding:14px 16px;}
+.shc-row.owner{background:rgba(42,122,114,0.14);border-color:rgba(42,122,114,0.32);}
+.shc-ico{width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.shc-row.owner .shc-ico{background:rgba(42,122,114,0.28);}
+.shc-t{font-size:13px;font-weight:500;color:#fff;margin-bottom:4px;}
+.shc-d{font-size:12px;color:rgba(255,255,255,0.55);line-height:1.5;}
+.shc-conn{display:flex;align-items:center;gap:8px;padding:7px 4px;}
+.shc-line{flex:1;height:1px;background:rgba(255,255,255,0.07);}
+.shc-conn span{font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:1px;}
 
-/* SHARED */
-section{padding:96px 48px;}
+/* HONESTY */
+.honesty{background:var(--navy);padding:56px 48px;}
+.honesty-inner{max-width:760px;margin:0 auto;}
+.eyebrow-nav{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--teal-light);display:block;margin-bottom:12px;}
+.hon-h{font-family:'Fraunces',serif;font-size:clamp(28px,3vw,44px);font-weight:600;line-height:1.15;letter-spacing:-0.8px;color:#fff;margin-bottom:18px;}
+.hon-h em{font-style:italic;font-weight:300;color:rgba(255,255,255,0.38);}
+.hon-body{font-size:16px;font-weight:300;line-height:1.75;color:rgba(255,255,255,0.78);}
+.hon-body strong{color:#fff;font-weight:500;}
+
+/* SHARED SECTION */
+.sec{padding:64px 48px;}
 .si{max-width:1200px;margin:0 auto;}
 .eyebrow{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:12px;}
 .h2{font-family:'Fraunces',serif;font-size:clamp(30px,3.5vw,50px);font-weight:600;line-height:1.1;letter-spacing:-1px;color:var(--navy);margin-bottom:14px;}
 .h2 em{font-style:italic;font-weight:300;color:var(--ink-60);}
-.sub{font-size:15px;font-weight:300;line-height:1.65;color:var(--ink-60);max-width:580px;}
-
-/* HONESTY */
-.honesty{background:var(--navy);padding:88px 48px;}
-.honesty-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
-.honesty-h2{font-family:'Fraunces',serif;font-size:clamp(28px,3vw,46px);font-weight:600;line-height:1.15;letter-spacing:-0.8px;color:#fff;margin-bottom:20px;}
-.honesty-h2 em{font-style:italic;font-weight:300;color:rgba(255,255,255,0.4);}
-.honesty-body{font-size:15px;font-weight:300;line-height:1.75;color:rgba(255,255,255,0.82);}
-.honesty-body p{margin-bottom:16px;}
-.honesty-body p:last-child{margin-bottom:0;}
-.honesty-body strong{color:rgba(255,255,255,0.82);font-weight:500;}
-/* Architectural SVG visual */
-.arch-box{background:linear-gradient(135deg,#0a1628,#111f38);border-radius:14px;overflow:hidden;aspect-ratio:4/3;}
+.sub{font-size:15px;font-weight:300;line-height:1.7;color:var(--ink-60);max-width:580px;}
 
 /* HOW */
-.how{background:var(--white);padding-top:60px;padding-bottom:60px;}
-.how-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:32px;}
-.how-step{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--border);cursor:pointer;}
-.how-step:last-child{border-bottom:none;}
-.step-num{width:34px;height:34px;flex-shrink:0;border-radius:50%;background:var(--off);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:14px;font-weight:600;color:var(--ink-60);transition:all .2s;margin-top:2px;}
-.how-step.active .step-num{background:var(--navy);color:#fff;border-color:var(--navy);}
-.step-title{font-family:'Fraunces',serif;font-size:17px;font-weight:600;color:var(--ink-60);margin-bottom:5px;transition:color .2s;}
-.how-step.active .step-title{color:var(--navy);}
-.step-desc{font-size:13px;color:var(--ink-60);line-height:1.65;display:none;}
-.how-step.active .step-desc{display:block;}
+.how{background:var(--white);}
+.how-steps{max-width:720px;margin-top:32px;}
+.step{display:flex;gap:18px;padding:20px 12px;border-bottom:1px solid var(--border);cursor:pointer;border-radius:8px;margin:0 -12px;transition:background .15s;}
+.step:last-child{border-bottom:none;}
+.step:not(.active):hover{background:var(--off);}
+.step-n{width:34px;height:34px;flex-shrink:0;border-radius:50%;background:var(--off);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:14px;font-weight:600;color:var(--ink-60);transition:all .2s;margin-top:2px;}
+.step.active .step-n{background:var(--navy);color:#fff;border-color:var(--navy);}
+.step-title{font-family:'Fraunces',serif;font-size:17px;font-weight:600;color:var(--ink-60);margin-bottom:0;transition:color .2s;display:flex;align-items:center;justify-content:space-between;gap:8px;}
+.step.active .step-title{color:var(--navy);}
+.step-chev{font-size:18px;color:var(--ink-30);transition:all .2s;flex-shrink:0;}
+.step.active .step-chev{color:var(--navy);transform:rotate(90deg);}
+.step-body{font-size:13px;color:var(--ink-60);line-height:1.65;display:none;margin-top:8px;}
+.step.active .step-body{display:block;}
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;}
+.pill{font-size:11px;font-weight:600;color:var(--teal);background:var(--teal-pale);border:1px solid rgba(42,122,114,0.18);padding:3px 10px;border-radius:20px;}
 
-/* Dashboard screenshot */
-.dash-wrap{position:sticky;top:90px;}
-.dash{background:var(--navy);border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);}
-.dash-bar{background:rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.07);padding:12px 18px;display:flex;align-items:center;justify-content:space-between;}
-.dash-bar-title{font-family:'Fraunces',serif;font-size:14px;font-weight:600;color:#fff;}
-.dash-badge{background:var(--teal);color:#fff;font-size:9px;font-weight:700;padding:2px 8px;border-radius:10px;}
-.dash-body{padding:14px;}
-.dash-hero{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);border-radius:9px;padding:14px 16px;margin-bottom:12px;}
-.dash-addr{font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:#fff;margin-bottom:4px;}
-.dash-meta{font-size:11px;color:rgba(255,255,255,0.7);margin-bottom:8px;}
-.dash-pm{display:flex;justify-content:space-between;font-size:10px;margin-bottom:5px;}
-.dash-pm span:first-child{color:rgba(255,255,255,0.75);}
-.dash-pm span:last-child{color:#5dd6cc;font-weight:700;}
-.dash-trk{height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;margin-bottom:7px;}
-.dash-fill{height:100%;width:43%;background:linear-gradient(90deg,var(--teal),var(--teal-light));}
-.dash-stops{display:flex;justify-content:space-between;}
-.dash-stop{display:flex;flex-direction:column;align-items:center;gap:2px;}
-.sd{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.12);}
-.sd.done{background:var(--teal);}
-.sd.now{background:#fff;box-shadow:0 0 0 2px rgba(255,255,255,0.2);}
-.dash-stop span{font-size:10px;color:rgba(255,255,255,0.6);}
-.dash-stop.done span,.dash-stop.now span{color:#fff;font-weight:600;}
-.dash-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:10px;}
-.ds{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:7px;padding:10px 8px;text-align:center;}
-.dsv{font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:#fff;line-height:1;}
-.dsl{font-size:11px;color:rgba(255,255,255,0.65);margin-top:3px;line-height:1.3;}
-.dash-enq{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:12px 14px;margin-bottom:10px;}
-.dash-enq-hd{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.65);margin-bottom:8px;}
-.dei{display:flex;align-items:center;gap:7px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.04);}
-.dei:last-child{border-bottom:none;}
-.dav{width:26px;height:26px;border-radius:50%;background:rgba(42,122,114,0.35);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;flex-shrink:0;}
-.dn{font-size:12px;font-weight:600;color:#fff;}
-.dp{font-size:11px;color:rgba(255,255,255,0.55);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px;}
-.du{width:5px;height:5px;background:var(--teal);border-radius:50%;margin-left:auto;flex-shrink:0;}
-.dash-ai{background:rgba(42,122,114,0.18);border:1px solid rgba(42,122,114,0.4);border-radius:8px;padding:12px 14px;}
-.dai-hd{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#5dd6cc;margin-bottom:5px;}
-.dai-txt{font-size:12px;color:rgba(255,255,255,0.78);line-height:1.55;}
-.dash-note{text-align:right;margin-top:6px;font-size:10px;color:rgba(255,255,255,0.4);}
-.dash-caption{text-align:center;margin-top:10px;font-size:12px;color:var(--ink-60);font-style:italic;}
-
-/* Split */
-.split-card{background:var(--navy);border-radius:12px;padding:24px;margin-top:22px;}
-.split-lbl{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:16px;}
-.split-cols{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.split-col-hd{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;padding-bottom:7px;border-bottom:1px solid rgba(255,255,255,0.07);}
-.sc-you .split-col-hd{color:var(--teal-light);}
-.sc-us .split-col-hd{color:rgba(255,255,255,0.38);}
-.si-item{display:flex;align-items:flex-start;gap:7px;padding:5px 0;font-size:12px;line-height:1.4;border-bottom:1px solid rgba(255,255,255,0.04);}
-.si-item:last-child{border-bottom:none;}
-.sc-you .si-item{color:rgba(255,255,255,0.92);}
-.sc-us .si-item{color:rgba(255,255,255,0.72);}
-.split-note{margin-top:12px;background:rgba(42,122,114,0.1);border:1px solid rgba(42,122,114,0.18);border-radius:7px;padding:11px 13px;font-size:12px;color:rgba(255,255,255,0.82);line-height:1.5;}
-.split-note strong{color:var(--teal-light);}
+/* SAVING */
+.saving{background:var(--navy);padding:64px 48px;}
+.saving-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.saving-ey{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--teal-light);margin-bottom:10px;}
+.saving-h{font-family:'Fraunces',serif;font-size:36px;font-weight:600;color:#fff;margin-bottom:10px;letter-spacing:-0.5px;}
+.saving-sub{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.65;max-width:320px;}
+.saving-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;overflow:hidden;}
+.saving-row{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:24px 28px;gap:16px;border-bottom:1px solid rgba(255,255,255,0.07);}
+.saving-lbl{font-size:11px;color:rgba(255,255,255,0.4);margin-bottom:6px;}
+.saving-num{font-family:'Fraunces',serif;font-size:28px;font-weight:700;color:#fff;}
+.saving-num.cross{color:rgba(255,255,255,0.28);text-decoration:line-through;}
+.saving-num.hi{color:#5dd6cc;}
+.saving-vs{font-size:11px;font-weight:600;color:rgba(255,255,255,0.22);letter-spacing:1px;}
+.saving-result{display:flex;align-items:baseline;gap:10px;padding:18px 28px;background:rgba(42,122,114,0.12);}
+.saving-rl{font-size:12px;color:rgba(255,255,255,0.45);}
+.saving-rn{font-family:'Fraunces',serif;font-size:32px;font-weight:700;color:#5dd6cc;}
+.saving-rs{font-size:12px;color:rgba(255,255,255,0.45);}
 
 /* PLATFORM */
 .platform{background:var(--off);}
-.plat-top{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:end;margin-bottom:48px;}
+.plat-top{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:32px;}
 .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
 .feat{background:var(--white);border:1px solid var(--border);border-radius:11px;padding:22px;transition:all .2s;}
-.feat:hover{border-color:var(--teal);box-shadow:0 4px 18px rgba(42,122,114,0.1);transform:translateY(-2px);}
+.feat:hover{border-color:var(--teal);transform:translateY(-2px);}
 .feat-ico{width:38px;height:38px;background:var(--teal-pale);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;margin-bottom:13px;}
 .feat-title{font-family:'Fraunces',serif;font-size:15px;font-weight:600;color:var(--navy);margin-bottom:5px;}
 .feat-desc{font-size:12px;color:var(--ink-60);line-height:1.55;}
 
 /* ARCH BREAK */
-.arch-break{background:var(--navy);padding:0;overflow:hidden;height:260px;position:relative;}
-.arch-break::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 50%,rgba(42,122,114,0.13),transparent 60%);}
-.arch-break-inner{max-width:1200px;margin:0 auto;height:100%;display:flex;align-items:center;padding:0 48px;gap:60px;position:relative;z-index:1;}
-.arch-break-text{flex:1;}
-.arch-bh{font-family:'Fraunces',serif;font-size:clamp(22px,2.5vw,36px);font-weight:600;color:#fff;line-height:1.2;letter-spacing:-.5px;}
-.arch-bh em{font-style:italic;font-weight:300;color:rgba(255,255,255,0.38);}
-.arch-bs{font-size:14px;color:rgba(255,255,255,0.78);margin-top:10px;line-height:1.65;max-width:420px;}
-.arch-svg{flex-shrink:0;opacity:.35;}
-
-/* PROCESS */
-.process{background:var(--navy);}
-.process .h2{color:#fff;}
-.process .h2 em{color:rgba(255,255,255,0.38);}
-.process .sub{color:rgba(255,255,255,0.78);}
-.proc-track-old{display:none;}
-
-.proc-step{flex:1;padding-right:16px;position:relative;}
-.proc-node{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:14px;font-weight:600;color:rgba(255,255,255,0.75);margin-bottom:17px;position:relative;z-index:1;}
-.proc-step.done .proc-node{background:rgba(42,122,114,0.25);border-color:var(--teal);color:var(--teal-light);}
-.proc-step.now .proc-node{background:var(--teal);border-color:var(--teal);color:#fff;box-shadow:0 0 0 4px rgba(42,122,114,0.2);}
-.proc-wk{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:5px;}
-.proc-step.done .proc-wk,.proc-step.now .proc-wk{color:var(--teal-light);}
-.proc-title{font-family:'Fraunces',serif;font-size:14px;font-weight:600;color:rgba(255,255,255,0.78);margin-bottom:6px;}
-.proc-step.now .proc-title{color:#fff;font-weight:700;}
-.proc-desc{font-size:12px;color:rgba(255,255,255,0.72);line-height:1.55;}
-.proc-step.now .proc-desc{color:rgba(255,255,255,0.85);}
+.arch{background:var(--navy);padding:56px 48px;position:relative;overflow:hidden;}
+.arch::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 50%,rgba(42,122,114,0.12),transparent 60%);pointer-events:none;}
+.arch-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1;}
+.arch-h{font-family:'Fraunces',serif;font-size:clamp(20px,2.5vw,34px);font-weight:600;color:#fff;line-height:1.2;letter-spacing:-0.5px;}
+.arch-h em{font-style:italic;font-weight:300;color:rgba(255,255,255,0.36);}
+.arch-p{font-size:14px;color:rgba(255,255,255,0.6);margin-top:10px;line-height:1.65;max-width:560px;}
 
 /* CONDUCT */
 .conduct{background:var(--white);}
-.conduct-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:46px;}
-.ccard{border-radius:12px;padding:26px 28px;border:1px solid var(--border);}
-.ccard.can{background:var(--teal-pale);border-color:rgba(42,122,114,0.18);}
-.ccard.cant{background:var(--off);}
-.ccard-title{font-family:'Fraunces',serif;font-size:18px;font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
-.ccard.can .ccard-title{color:var(--navy);}
-.ccard.cant .ccard-title{color:var(--ink-60);}
-.citem{display:flex;align-items:flex-start;gap:9px;padding:9px 0;font-size:13px;line-height:1.5;border-bottom:1px solid rgba(14,14,14,0.05);}
-.citem:last-child{border-bottom:none;}
-.ccard.can .citem{color:var(--ink);}
-.ccard.cant .citem{color:var(--ink-60);}
-.conduct-note{margin-top:22px;background:var(--navy);border-radius:12px;padding:22px 26px;display:flex;align-items:flex-start;gap:16px;}
-.cn-ico{font-size:20px;flex-shrink:0;margin-top:2px;}
-.cn-title{font-family:'Fraunces',serif;font-size:16px;font-weight:600;color:#fff;margin-bottom:6px;}
-.cn-text{font-size:13px;color:rgba(255,255,255,0.8);line-height:1.65;}
+.conduct-split{display:grid;grid-template-columns:1fr 1px 1fr;margin-top:32px;border:1px solid var(--border);border-radius:12px;overflow:hidden;}
+.ccol{padding:26px 28px;}
+.ccol.can{background:var(--teal-pale);}
+.ccol.cant{background:var(--off);}
+.ccol-title{font-family:'Fraunces',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.cdiv{background:var(--border);}
+.ci{display:flex;align-items:flex-start;gap:10px;padding:8px 0;font-size:13px;line-height:1.45;border-bottom:1px solid rgba(14,14,14,0.05);}
+.ci:last-child{border-bottom:none;}
+.ccol.can .ci{color:var(--ink);}
+.ccol.cant .ci{color:var(--ink-60);}
+.ci-y{color:var(--teal);font-size:13px;flex-shrink:0;margin-top:1px;}
+.ci-n{color:var(--ink-30);font-size:13px;flex-shrink:0;margin-top:1px;}
 
 /* FOR YOU */
 .for-you{background:var(--off);}
-.for-honest{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:28px 30px;margin-bottom:20px;}
-.fh-title{font-family:'Fraunces',serif;font-size:18px;font-weight:600;color:var(--navy);margin-bottom:10px;}
+.for-honest{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:26px 28px;margin-bottom:18px;}
+.fh-title{font-family:'Fraunces',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:10px;}
 .fh-text{font-size:14px;color:var(--ink-60);line-height:1.7;}
-.fh-text p{margin-bottom:10px;}
-.fh-text p:last-child{margin-bottom:0;}
+.fh-text p+p{margin-top:10px;}
 .fh-text strong{color:var(--ink);font-weight:600;}
-.for-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
-.fcard{border-radius:12px;padding:26px 28px;border:1px solid var(--border);}
-.fcard.yes{background:var(--teal-pale);border-color:rgba(42,122,114,0.18);}
+.for-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.fcard{border-radius:12px;padding:24px 26px;border:1px solid var(--border);}
+.fcard.yes{background:var(--teal-pale);border-color:rgba(42,122,114,0.16);}
 .fcard.no{background:var(--white);}
-.fcard-title{font-family:'Fraunces',serif;font-size:18px;font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.fcard-title{font-family:'Fraunces',serif;font-size:17px;font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
 .fcard.yes .fcard-title{color:var(--navy);}
 .fcard.no .fcard-title{color:var(--ink-60);}
-.fitem{display:flex;align-items:flex-start;gap:9px;padding:9px 0;font-size:13px;line-height:1.5;border-bottom:1px solid rgba(14,14,14,0.05);}
-.fitem:last-child{border-bottom:none;}
-.fcard.yes .fitem{color:var(--ink);}
-.fcard.no .fitem{color:var(--ink-60);}
+.fi{display:flex;align-items:flex-start;gap:9px;padding:8px 0;font-size:13px;line-height:1.5;border-bottom:1px solid rgba(14,14,14,0.05);}
+.fi:last-child{border-bottom:none;}
+.fcard.yes .fi{color:var(--ink);}
+.fcard.no .fi{color:var(--ink-60);}
 
 /* CTA */
-.cta{background:var(--navy);padding:96px 48px;text-align:center;position:relative;overflow:hidden;}
-.cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(42,122,114,0.14),transparent 60%);pointer-events:none;}
+.cta{background:var(--navy);padding:80px 48px;text-align:center;position:relative;overflow:hidden;}
+.cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(42,122,114,0.13),transparent 60%);pointer-events:none;}
 .cta-inner{position:relative;z-index:1;max-width:600px;margin:0 auto;}
-.cta-h2{font-family:'Fraunces',serif;font-size:clamp(34px,4vw,54px);font-weight:600;color:#fff;line-height:1.1;letter-spacing:-1px;margin-bottom:14px;}
-.cta-h2 em{font-style:italic;font-weight:300;color:rgba(255,255,255,0.42);}
-.cta-sub{font-size:16px;color:rgba(255,255,255,0.8);line-height:1.65;margin-bottom:36px;}
-.book-form{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:13px;padding:26px;text-align:left;}
+.cta-h{font-family:'Fraunces',serif;font-size:clamp(34px,4vw,54px);font-weight:600;color:#fff;line-height:1.1;letter-spacing:-1px;margin-bottom:14px;}
+.cta-h em{font-style:italic;font-weight:300;color:rgba(255,255,255,0.38);}
+.cta-sub{font-size:16px;color:rgba(255,255,255,0.7);line-height:1.65;margin-bottom:36px;}
+.form{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:13px;padding:26px;text-align:left;}
 .f-row{display:grid;grid-template-columns:1fr 1fr;gap:11px;}
 .f-grp{margin-bottom:11px;}
-.f-label{display:block;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:5px;}
+.f-label{display:block;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:5px;}
 .f-input{width:100%;padding:10px 13px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);border-radius:6px;font-family:'Epilogue',sans-serif;font-size:13px;color:#fff;outline:none;transition:border .15s;}
 .f-input:focus{border-color:var(--teal);}
-.f-input::placeholder{color:rgba(255,255,255,0.2);}
+.f-input::placeholder{color:rgba(255,255,255,0.18);}
 .f-input option{background:var(--navy);}
-.f-submit{width:100%;padding:13px;background:var(--teal);color:#fff;font-family:'Epilogue',sans-serif;font-size:14px;font-weight:600;border-radius:7px;border:none;cursor:pointer;margin-top:3px;transition:background .15s;}
+.f-submit{width:100%;padding:13px;background:var(--teal);color:#fff;font-family:'Epilogue',sans-serif;font-size:14px;font-weight:600;border-radius:7px;border:none;cursor:pointer;transition:background .15s;}
 .f-submit:hover{background:var(--teal-light);}
-.f-note{text-align:center;margin-top:11px;font-size:11px;color:rgba(255,255,255,0.25);}
+.f-note{text-align:center;margin-top:11px;font-size:11px;color:rgba(255,255,255,0.22);}
 
 /* FOOTER */
 footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);padding:36px 48px;}
-.foot-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+.foot-top{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
 .foot-logo{font-family:'Fraunces',serif;font-size:17px;font-weight:600;color:#fff;}
-.foot-logo em{font-style:italic;font-weight:300;color:rgba(255,255,255,0.38);}
+.foot-logo em{font-style:italic;font-weight:300;color:rgba(255,255,255,0.35);}
 .foot-links{display:flex;gap:22px;list-style:none;}
-.foot-links a{font-size:12px;color:rgba(255,255,255,0.32);text-decoration:none;transition:color .15s;}
+.foot-links a{font-size:12px;color:rgba(255,255,255,0.3);text-decoration:none;transition:color .15s;}
 .foot-links a:hover{color:rgba(255,255,255,0.65);}
-.foot-legal{font-size:11px;color:rgba(255,255,255,0.2);text-align:center;margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.05);max-width:1200px;margin:18px auto 0;}
+.foot-legal{font-size:11px;color:rgba(255,255,255,0.18);text-align:center;margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.05);max-width:1200px;margin:18px auto 0;}
 
 /* REVEAL */
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease;}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .5s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
 .d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}
 
+/* RESPONSIVE */
 @media(max-width:900px){
   .nav{padding:0 20px;}.nav-links{display:none;}
-  section,.cta,.honesty,.arch-break,.conduct,.for-you{padding:60px 20px;}
   .hero{padding:90px 20px 56px;}
-  .hero-inner,.honesty-grid,.how-grid,.plat-top,.for-grid,.conduct-grid{grid-template-columns:1fr;}
-  .hcard{display:none;}
+  .hero-inner{grid-template-columns:1fr;}.shc{margin-top:32px;}
+  .honesty,.saving,.arch,.cta,.conduct,.for-you{padding-left:20px;padding-right:20px;}
+  .sec{padding:56px 20px;}
+  .plat-top,.saving-inner,.for-grid{grid-template-columns:1fr;}
   .feat-grid{grid-template-columns:1fr 1fr;}
-  .proc-track{flex-direction:column;gap:24px;}.proc-track::before{display:none;}
+  .conduct-split{grid-template-columns:1fr;gap:0;}.cdiv{width:100%;height:1px;}
   .f-row{grid-template-columns:1fr;}
-  .foot-inner{flex-direction:column;gap:16px;text-align:center;}
-  .arch-break{height:auto;}.arch-break-inner{flex-direction:column;padding:40px 20px;}.arch-svg{display:none;}
+  .foot-top{flex-direction:column;gap:16px;text-align:center;}
 }
-
-/* PROCESS LIST - vertical clean layout */
-.proc-list{margin-top:52px;display:flex;flex-direction:column;max-width:760px;}
-.pl-item{display:flex;gap:0;align-items:stretch;}
-.pl-left{display:flex;flex-direction:column;align-items:center;margin-right:24px;flex-shrink:0;}
-.pl-icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:16px;font-weight:600;flex-shrink:0;background:var(--teal);border:1.5px solid var(--teal);color:#fff;}
-.pl-item.done .pl-icon{background:var(--teal);border-color:var(--teal);color:#fff;opacity:0.85;}
-.pl-item.now .pl-icon{background:var(--teal);border-color:var(--teal);color:#fff;box-shadow:0 0 0 4px rgba(42,122,114,0.2);}
-.pl-line{flex:1;width:1.5px;background:rgba(255,255,255,0.1);margin:6px 0;}
-.pl-item.done .pl-line{background:rgba(42,122,114,0.4);}
-.pl-item.now .pl-line{background:rgba(42,122,114,0.25);}
-.pl-content{padding-bottom:32px;flex:1;}
-.pl-week{font-size:10px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--teal-light);margin-bottom:5px;margin-top:10px;}
-.pl-item:not(.done):not(.now) .pl-week{color:var(--teal-light);}
-.pl-title{font-family:'Fraunces',serif;font-size:20px;font-weight:600;color:#fff;margin-bottom:8px;}
-.pl-item:not(.done):not(.now) .pl-title{color:#fff;}
-.pl-desc{font-size:14px;color:rgba(255,255,255,0.72);line-height:1.65;}
-.pl-item.last .pl-content{padding-bottom:0;}
-
-/* SPLIT HERO CARD */
-.split-hero-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:14px;padding:22px;animation:rise .7s ease both .2s;}
-.shc-label{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:16px;}
-.shc-row{display:flex;align-items:flex-start;gap:13px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:14px 16px;}
-.shc-row.shc-owner{background:rgba(42,122,114,0.15);border-color:rgba(42,122,114,0.35);}
-.shc-ico{width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
-.shc-row.shc-owner .shc-ico{background:rgba(42,122,114,0.3);}
-.shc-title{font-size:13px;font-weight:500;color:#fff;margin-bottom:4px;}
-.shc-desc{font-size:12px;color:rgba(255,255,255,0.55);line-height:1.5;}
-.shc-connector{display:flex;align-items:center;gap:8px;padding:8px 4px;}
-.shc-line{flex:1;height:1px;background:rgba(255,255,255,0.08);}
-.shc-connector span{font-size:10px;color:rgba(255,255,255,0.22);letter-spacing:1px;white-space:nowrap;}
-.shc-stats{display:flex;margin-top:18px;border:1px solid rgba(255,255,255,0.08);border-radius:8px;overflow:hidden;}
-.shc-stat{flex:1;padding:11px 14px;border-right:1px solid rgba(255,255,255,0.08);}
-.shc-stat:last-child{border-right:none;}
-.shc-val{font-family:'Fraunces',serif;font-size:20px;font-weight:700;color:#5dd6cc;line-height:1;}
-.shc-lbl{font-size:10px;color:rgba(255,255,255,0.35);margin-top:3px;}
-
-.split-hero-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:14px;padding:22px;animation:rise .7s ease both .2s;}
-.shc-label{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:16px;}
-.shc-row{display:flex;align-items:flex-start;gap:13px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:14px 16px;}
-.shc-row.shc-owner{background:rgba(42,122,114,0.15);border-color:rgba(42,122,114,0.35);}
-.shc-ico{width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
-.shc-row.shc-owner .shc-ico{background:rgba(42,122,114,0.3);}
-.shc-title{font-size:13px;font-weight:500;color:#fff;margin-bottom:4px;}
-.shc-desc{font-size:12px;color:rgba(255,255,255,0.6);line-height:1.55;}
-.shc-connector{display:flex;align-items:center;gap:8px;padding:8px 4px;}
-.shc-line{flex:1;height:1px;background:rgba(255,255,255,0.08);}
-.shc-connector span{font-size:10px;color:rgba(255,255,255,0.22);letter-spacing:1px;white-space:nowrap;}
-.shc-stats{display:flex;margin-top:18px;border:1px solid rgba(255,255,255,0.08);border-radius:8px;overflow:hidden;}
-.shc-stat{flex:1;padding:11px 14px;border-right:1px solid rgba(255,255,255,0.08);}
-.shc-stat:last-child{border-right:none;}
-.shc-val{font-family:'Fraunces',serif;font-size:20px;font-weight:700;color:#5dd6cc;line-height:1;}
-.shc-lbl{font-size:10px;color:rgba(255,255,255,0.35);margin-top:3px;}
-
-/* HOW VISUAL PANEL */
-.how-visual-panel{position:sticky;top:90px;align-self:start;}
-.how-visual{display:none;}
-.how-visual.active{display:block;animation:fadeUp .25s ease;}
-@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-.hv-card{background:var(--navy);border-radius:14px;padding:24px;color:#fff;}
-.hv-label{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--teal-light);margin-bottom:8px;}
-.hv-title{font-family:'Fraunces',serif;font-size:22px;font-weight:600;color:#fff;margin-bottom:18px;}
-.hv-note{font-size:12px;color:rgba(255,255,255,0.45);margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.08);line-height:1.55;}
-/* Items list */
-.hv-items{display:flex;flex-direction:column;gap:10px;}
-.hv-item{display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(255,255,255,0.82);}
-.hv-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
-.hv-dot.teal{background:var(--teal);}
-.hv-dot.muted{background:rgba(255,255,255,0.2);}
-/* Portals */
-.hv-portals{display:flex;flex-direction:column;gap:10px;}
-.hv-portal{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:9px;padding:13px 15px;}
-.hv-portal-logo{width:34px;height:34px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;flex-shrink:0;}
-.hv-portal.rea .hv-portal-logo{background:#e8001d;}
-.hv-portal.domain .hv-portal-logo{background:#1352a0;}
-.hv-portal-name{font-size:13px;font-weight:500;color:#fff;}
-.hv-portal-status{font-size:11px;color:rgba(255,255,255,0.45);margin-top:2px;}
-.hv-live-dot{width:8px;height:8px;background:#27ae60;border-radius:50%;margin-left:auto;animation:blink 2s infinite;}
-/* Check-in */
-.hv-checkin{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);border-radius:9px;overflow:hidden;}
-.hv-checkin-hd{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-light);padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.07);}
-.hv-attendee{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.05);}
-.hv-attendee:last-child{border-bottom:none;}
-.hv-av{width:28px;height:28px;border-radius:50%;background:rgba(42,122,114,0.35);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;flex-shrink:0;}
-.hv-att-name{font-size:12px;font-weight:500;color:#fff;}
-.hv-att-sub{font-size:11px;color:rgba(255,255,255,0.4);margin-top:1px;}
-/* Offers */
-.hv-offers{display:flex;flex-direction:column;gap:9px;}
-.hv-offer{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);border-radius:9px;padding:13px 15px;}
-.hv-offer.best{background:rgba(42,122,114,0.15);border-color:rgba(42,122,114,0.35);}
-.hv-offer-buyer{font-size:12px;color:rgba(255,255,255,0.6);margin-bottom:4px;display:flex;align-items:center;gap:8px;}
-.hv-offer-tag{background:var(--teal);color:#fff;font-size:9px;font-weight:700;padding:2px 7px;border-radius:10px;}
-.hv-offer-amt{font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:#fff;line-height:1;}
-.hv-offer.best .hv-offer-amt{color:#5dd6cc;}
-.hv-offer-detail{font-size:11px;color:rgba(255,255,255,0.4);margin-top:3px;}
-
-
-.hero-facts{display:flex;align-items:center;margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);}
-.hf-item{flex:1;}
-.hf-val{font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:#5dd6cc;line-height:1;margin-bottom:4px;}
-.hf-lbl{font-size:12px;color:rgba(255,255,255,0.5);}
-.hf-divider{width:1px;height:36px;background:rgba(255,255,255,0.1);margin:0 24px;}
-
-.hv-costs{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);border-radius:9px;overflow:hidden;margin-bottom:12px;}
-.hv-costs-hd{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.4);padding:9px 13px;border-bottom:1px solid rgba(255,255,255,0.07);}
-.hv-cost-item{display:flex;justify-content:space-between;align-items:center;padding:7px 13px;border-bottom:1px solid rgba(255,255,255,0.05);font-size:12px;}
-.hv-cost-label{color:rgba(255,255,255,0.65);}
-.hv-cost-val{color:rgba(255,255,255,0.45);font-size:11px;}
-.hv-cost-total{display:flex;justify-content:space-between;align-items:center;padding:9px 13px;font-size:12px;font-weight:600;color:#fff;background:rgba(255,255,255,0.06);}
-.hv-saving-row{background:rgba(42,122,114,0.12);border:1px solid rgba(42,122,114,0.25);border-radius:9px;padding:13px 14px;}
-.hv-saving-label{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-light);margin-bottom:10px;}
-.hv-saving-compare{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
-.hv-saving-col{flex:1;}
-.hv-saving-name{font-size:10px;color:rgba(255,255,255,0.45);margin-bottom:3px;}
-.hv-saving-num{font-family:'Fraunces',serif;font-size:18px;font-weight:700;}
-.hv-saving-num.muted{color:rgba(255,255,255,0.35);text-decoration:line-through;}
-.hv-saving-num.bright{color:#5dd6cc;}
-.hv-saving-arrow{font-size:14px;color:rgba(255,255,255,0.25);flex-shrink:0;}
-.hv-saving-result{font-size:12px;color:rgba(255,255,255,0.7);border-top:1px solid rgba(255,255,255,0.08);padding-top:9px;}
-.hv-saving-result strong{color:#5dd6cc;}
-
-.saving-section{background:var(--navy);padding:64px 48px;}
-.saving-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
-.saving-eyebrow{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--teal-light);margin-bottom:10px;}
-.saving-h{font-family:'Fraunces',serif;font-size:36px;font-weight:600;color:#fff;margin-bottom:10px;letter-spacing:-0.5px;}
-.saving-sub{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.65;max-width:320px;}
-.saving-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;overflow:hidden;}
-.saving-row{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:24px 28px;gap:16px;border-bottom:1px solid rgba(255,255,255,0.08);}
-.saving-col-label{font-size:11px;color:rgba(255,255,255,0.45);margin-bottom:6px;}
-.saving-col-num{font-family:'Fraunces',serif;font-size:28px;font-weight:700;color:#fff;}
-.saving-col-num.crossed{color:rgba(255,255,255,0.3);text-decoration:line-through;}
-.saving-col-num.green{color:#5dd6cc;}
-.saving-vs{font-size:11px;font-weight:600;color:rgba(255,255,255,0.25);letter-spacing:1px;text-transform:uppercase;}
-.saving-result{display:flex;align-items:baseline;gap:10px;padding:18px 28px;background:rgba(42,122,114,0.12);}
-.saving-result-label{font-size:12px;color:rgba(255,255,255,0.45);}
-.saving-result-num{font-family:'Fraunces',serif;font-size:32px;font-weight:700;color:#5dd6cc;}
-.saving-result-sub{font-size:12px;color:rgba(255,255,255,0.45);}
-@media(max-width:900px){.saving-inner{grid-template-columns:1fr;}.saving-section{padding:60px 20px;}}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav class="nav">
   <a href="#" class="nav-logo">
     <div class="nav-logo-mark">P</div>
@@ -439,293 +225,108 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
     <li><a href="#how">How It Works</a></li>
     <li><a href="#platform">Platform</a></li>
     <li><a href="#conduct">Owner's Guide</a></li>
-    <li><a href="#for-you">Is It Right For Me?</a></li>
   </ul>
   <a href="#consult" class="nav-cta">Book a Free Consultation →</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-orb o1"></div>
   <div class="hero-orb o2"></div>
   <div class="hero-grid"></div>
-  <!-- Architectural drawing background -->
-  <div class="hero-arch">
-    <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" fill="none" width="100%" height="100%">
-      <rect x="80" y="120" width="640" height="360" stroke="white" stroke-width="1"/>
-      <line x1="80" y1="240" x2="720" y2="240" stroke="white" stroke-width=".5"/>
-      <line x1="80" y1="360" x2="720" y2="360" stroke="white" stroke-width=".5"/>
-      <line x1="200" y1="120" x2="200" y2="480" stroke="white" stroke-width=".5"/>
-      <line x1="400" y1="120" x2="400" y2="480" stroke="white" stroke-width=".5"/>
-      <line x1="600" y1="120" x2="600" y2="480" stroke="white" stroke-width=".5"/>
-      <rect x="120" y="155" width="145" height="105" stroke="white" stroke-width="1.5"/>
-      <rect x="305" y="155" width="175" height="175" stroke="white" stroke-width="1.5"/>
-      <rect x="520" y="155" width="155" height="85" stroke="white" stroke-width="1.5"/>
-      <rect x="120" y="295" width="75" height="145" stroke="white" stroke-width="1"/>
-      <rect x="215" y="295" width="60" height="145" stroke="white" stroke-width="1"/>
-      <rect x="440" y="295" width="105" height="100" stroke="white" stroke-width="1"/>
-      <line x1="80" y1="480" x2="720" y2="480" stroke="white" stroke-width="1.5"/>
-      <circle cx="400" cy="80" r="3" fill="white" opacity=".4"/>
-      <line x1="400" y1="83" x2="400" y2="120" stroke="white" stroke-width=".5" stroke-dasharray="3 5"/>
-      <text x="86" y="110" fill="white" font-size="9" opacity=".35" font-family="monospace">ELEVATION · NORTH FAÇADE</text>
-      <text x="86" y="498" fill="white" font-size="8" opacity=".25" font-family="monospace">GL +0.000 · SCALE 1:100</text>
-    </svg>
-  </div>
-
   <div class="hero-inner">
     <div>
       <div class="hero-eyebrow"><span class="hero-dot"></span>Licensed Real Estate · Queensland</div>
       <h1 class="hero-h1">Your campaign.<br><em>Our expertise.</em></h1>
       <p class="hero-sub">Propel RE is a fully licensed real estate agency with a <strong>different model</strong>. You host the open homes. Your agent handles every enquiry, offer and negotiation. The platform keeps everything running between the two.</p>
       <div class="hero-actions">
-        <a href="#consult" class="btn-hero-p">Book a Free Consultation →</a>
-        <a href="#how" class="btn-hero-g">See How It Works</a>
+        <a href="#consult" class="btn-p">Book a Free Consultation →</a>
+        <a href="#how" class="btn-g">See How It Works</a>
       </div>
       <div class="hero-facts">
         <div class="hf-item"><div class="hf-val">1.1%</div><div class="hf-lbl">Commission incl. GST</div></div>
-        <div class="hf-divider"></div>
+        <div class="hf-div"></div>
         <div class="hf-item"><div class="hf-val">28 days</div><div class="hf-lbl">Structured campaign</div></div>
-        <div class="hf-divider"></div>
+        <div class="hf-div"></div>
         <div class="hf-item"><div class="hf-val">100%</div><div class="hf-lbl">Licensed agency backed</div></div>
       </div>
-
     </div>
-
-    <!-- App preview card -->
-    <div class="split-hero-card">
+    <div class="shc">
       <div class="shc-label">How it works</div>
-
-      <div class="shc-row shc-owner">
-        <div class="shc-ico">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1L14 6V14H10V10H6V14H2V6L8 1Z" stroke="rgba(255,255,255,0.85)" stroke-width="1.2" fill="none"/></svg>
-        </div>
-        <div>
-          <div class="shc-title">You — the owner</div>
-          <div class="shc-desc">Host open homes. Give buyers access. Register attendees on arrival.</div>
-        </div>
+      <div class="shc-row owner">
+        <div class="shc-ico"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1L14 6V14H10V10H6V14H2V6L8 1Z" stroke="rgba(255,255,255,0.85)" stroke-width="1.2"/></svg></div>
+        <div><div class="shc-t">You &mdash; the owner</div><div class="shc-d">Host open homes. Give buyers access. Register attendees on arrival.</div></div>
       </div>
-
-      <div class="shc-connector"><div class="shc-line"></div><span>backed by</span><div class="shc-line"></div></div>
-
-      <div class="shc-row shc-agent">
-        <div class="shc-ico">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="5" r="3" stroke="rgba(255,255,255,0.75)" stroke-width="1.2"/><path d="M2 14c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="rgba(255,255,255,0.75)" stroke-width="1.2" fill="none"/></svg>
-        </div>
-        <div>
-          <div class="shc-title">Your licensed agent</div>
-          <div class="shc-desc">All enquiries, offers, negotiations, contracts and settlement.</div>
-        </div>
+      <div class="shc-conn"><div class="shc-line"></div><span>backed by</span><div class="shc-line"></div></div>
+      <div class="shc-row">
+        <div class="shc-ico"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="5" r="3" stroke="rgba(255,255,255,0.75)" stroke-width="1.2"/><path d="M2 14c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="rgba(255,255,255,0.75)" stroke-width="1.2" fill="none"/></svg></div>
+        <div><div class="shc-t">Your licensed agent</div><div class="shc-d">All enquiries, offers, negotiations, contracts and settlement.</div></div>
       </div>
-
-      <div class="shc-connector"><div class="shc-line"></div><span>powered by</span><div class="shc-line"></div></div>
-
-      <div class="shc-row shc-platform">
-        <div class="shc-ico">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="8" rx="1" stroke="rgba(255,255,255,0.75)" stroke-width="1.2"/><path d="M5 14h6M8 11v3" stroke="rgba(255,255,255,0.75)" stroke-width="1.2" stroke-linecap="round"/></svg>
-        </div>
-        <div>
-          <div class="shc-title">Propel RE platform</div>
-          <div class="shc-desc">Listing tools, scheduling, campaign tracking and AI guidance.</div>
-        </div>
+      <div class="shc-conn"><div class="shc-line"></div><span>powered by</span><div class="shc-line"></div></div>
+      <div class="shc-row">
+        <div class="shc-ico"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="8" rx="1" stroke="rgba(255,255,255,0.75)" stroke-width="1.2"/><path d="M5 14h6M8 11v3" stroke="rgba(255,255,255,0.75)" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+        <div><div class="shc-t">Propel RE platform</div><div class="shc-d">Listing tools, scheduling, campaign tracking and AI guidance.</div></div>
       </div>
-
-
     </div>
   </div>
 </section>
 
-<!-- HONESTY -->
 <div class="honesty">
-  <div class="honesty-grid">
-    <div class="reveal">
-      <span class="eyebrow" style="color:var(--teal-light)">Before anything else</span>
-      <h2 class="honesty-h2">Real estate agents<br>exist <em>for good reason.</em></h2>
-      <div class="honesty-body">
-        <p>Selling your home is one of the biggest financial decisions you'll make. There are excellent agents out there and for many sellers, having a professional handle everything is absolutely the right call. <strong>Propel RE is a different choice, not a better one for everyone.</strong> If you want to be in the room rather than waiting by the phone, keep reading. If not, we'll tell you that honestly in our first conversation.</p>
-      </div>
-    </div>
-    <!-- House architectural SVG -->
-    <div class="arch-box reveal">
-      <svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" fill="none" width="100%" height="100%">
-        <rect x="0" y="0" width="560" height="420" fill="#0a1628"/>
-        <polygon points="280,45 490,165 490,385 70,385 70,165" stroke="rgba(42,122,114,0.55)" stroke-width="1.5" fill="rgba(13,31,60,0.5)"/>
-        <line x1="280" y1="45" x2="70" y2="165" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
-        <line x1="280" y1="45" x2="490" y2="165" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
-        <rect x="105" y="195" width="90" height="65" stroke="rgba(255,255,255,0.18)" stroke-width="1" fill="rgba(42,122,114,0.06)"/>
-        <line x1="150" y1="195" x2="150" y2="260" stroke="rgba(255,255,255,0.08)" stroke-width=".5"/>
-        <line x1="105" y1="228" x2="195" y2="228" stroke="rgba(255,255,255,0.08)" stroke-width=".5"/>
-        <rect x="370" y="195" width="90" height="65" stroke="rgba(255,255,255,0.18)" stroke-width="1" fill="rgba(42,122,114,0.06)"/>
-        <line x1="415" y1="195" x2="415" y2="260" stroke="rgba(255,255,255,0.08)" stroke-width=".5"/>
-        <line x1="370" y1="228" x2="460" y2="228" stroke="rgba(255,255,255,0.08)" stroke-width=".5"/>
-        <rect x="225" y="290" width="110" height="95" stroke="rgba(255,255,255,0.22)" stroke-width="1.5" fill="rgba(42,122,114,0.1)"/>
-        <circle cx="324" cy="342" r="4" fill="rgba(42,122,114,0.8)" stroke="rgba(42,122,114,1)" stroke-width="1"/>
-        <rect x="348" y="60" width="22" height="65" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-        <line x1="20" y1="385" x2="540" y2="385" stroke="rgba(42,122,114,0.5)" stroke-width="1.5"/>
-        <line x1="20" y1="395" x2="540" y2="395" stroke="rgba(255,255,255,0.04)" stroke-width=".5"/>
-        <!-- Dimension markers -->
-        <line x1="50" y1="165" x2="50" y2="385" stroke="rgba(255,255,255,0.07)" stroke-width=".5" stroke-dasharray="3 5"/>
-        <line x1="44" y1="165" x2="56" y2="165" stroke="rgba(255,255,255,0.1)" stroke-width=".5"/>
-        <line x1="44" y1="385" x2="56" y2="385" stroke="rgba(255,255,255,0.1)" stroke-width=".5"/>
-        <circle cx="280" cy="45" r="4" fill="rgba(42,122,114,0.9)"/>
-        <line x1="280" y1="49" x2="280" y2="90" stroke="rgba(42,122,114,0.3)" stroke-width=".5" stroke-dasharray="3 4"/>
-        <text x="280" y="408" fill="rgba(42,122,114,0.55)" font-size="9" font-family="monospace" text-anchor="middle" letter-spacing="2">OWNER · OCCUPIER · CAMPAIGN</text>
-        <text x="75" y="160" fill="rgba(255,255,255,0.2)" font-size="8" font-family="monospace">ELEVATION · SCALE 1:100</text>
-      </svg>
-    </div>
+  <div class="honesty-inner">
+    <span class="eyebrow-nav">Before anything else</span>
+    <h2 class="hon-h">Real estate agents exist <em>for good reason.</em></h2>
+    <p class="hon-body">Selling your home is one of the biggest financial decisions you will make. There are excellent agents out there and for many sellers, having a professional handle everything is absolutely the right call. <strong>Propel RE is a different choice, not a better one for everyone.</strong> If you want to be in the room rather than waiting by the phone, keep reading. If not, we will tell you that honestly in our first conversation.</p>
+    <p class="hon-body" style="margin-top:18px;">Propel RE suits sellers who are comfortable opening their home to buyers on weekends and happy to let their agent handle everything else. Your role is straightforward. The platform and your agent do the heavy lifting.</p>
   </div>
 </div>
 
-<!-- HOW IT WORKS -->
-<section class="how" id="how">
+<section class="sec how" id="how">
   <div class="si">
     <span class="eyebrow reveal">How It Works</span>
     <h2 class="h2 reveal">A new kind of agency.<br><em>Not a DIY kit.</em></h2>
     <p class="sub reveal">Propel RE remains your licensed agent of record. You take on the buyer-facing parts of the campaign. We provide the technology, the processes, and expert guidance behind every interaction.</p>
-    <div class="how-grid">
-      <!-- Steps -->
-      <div>
-        <div class="how-step active" onclick="setStep(0)">
-          <div class="step-num">1</div>
-          <div><div class="step-title">You meet your Propel RE agent</div><div class="step-desc">A full strategy session covering pricing, comparable sales, campaign structure, and exactly what to say and what to avoid throughout your sale. You leave knowing the plan inside out.</div></div>
-        </div>
-        <div class="how-step" onclick="setStep(1)">
-          <div class="step-num">2</div>
-          <div><div class="step-title">We launch your campaign professionally</div><div class="step-desc">Photography, floor plans, listing copy and portal submission on realestate.com.au and domain.com.au — all managed by Propel RE. Your listing goes live as an owner-occupier campaign, fully backed by a licensed agency.</div></div>
-        </div>
-        <div class="how-step" onclick="setStep(2)">
-          <div class="step-num">3</div>
-          <div><div class="step-title">You run open homes. Your agent handles the rest.</div><div class="step-desc">You open the door and welcome buyers in. The platform logs every visitor automatically via the check-in app. All buyer communication outside the inspection is handled by your licensed agent.</div></div>
-        </div>
-        <div class="how-step" onclick="setStep(3)">
-          <div class="step-num">4</div>
-          <div><div class="step-title">We manage every offer and negotiation</div><div class="step-desc">All offers flow through our structured platform. Your Propel RE agent handles all negotiation, counter-offers and price discussions. You review — we execute.</div></div>
-        </div>
-        <div class="how-step" onclick="setStep(4)">
-          <div class="step-num">5</div>
-          <div><div class="step-title">Contracts and settlement fully handled</div><div class="step-desc">Once the right offer is accepted, Propel RE manages all contracts, documentation and transaction management through to settlement.</div></div>
+    <div class="how-steps">
+      <div class="step active" onclick="setStep(0)">
+        <div class="step-n">1</div>
+        <div style="flex:1">
+          <div class="step-title">You meet your Propel RE agent <span class="step-chev">›</span></div>
+          <div class="step-body">A full strategy session covering pricing, comparable sales and campaign structure. You will leave with a clear plan and know exactly what to say at every open home.
+            <div class="pills"><span class="pill">Pricing strategy</span><span class="pill">Comparable sales</span><span class="pill">Owner's guide</span><span class="pill">Disclosure forms</span></div>
+          </div>
         </div>
       </div>
-
-      <!-- Dynamic visual panel -->
-      <div class="how-visual-panel">
-        <!-- Step 1: Strategy -->
-        <div class="how-visual active" id="hv-0">
-          <div class="hv-card">
-            <div class="hv-label">Step 1</div>
-            <div class="hv-title">Strategy Session</div>
-            <div class="hv-items">
-              <div class="hv-item"><div class="hv-dot teal"></div><span>Pricing strategy set</span></div>
-              <div class="hv-item"><div class="hv-dot teal"></div><span>Comparable sales reviewed</span></div>
-              <div class="hv-item"><div class="hv-dot teal"></div><span>28-day campaign planned</span></div>
-              <div class="hv-item"><div class="hv-dot teal"></div><span>Owner's guide completed</span></div>
-              <div class="hv-item"><div class="hv-dot teal"></div><span>Disclosure forms signed</span></div>
-            </div>
-            <div class="hv-note">Your agent does the prep work. You show up informed.</div>
+      <div class="step" onclick="setStep(1)">
+        <div class="step-n">2</div>
+        <div style="flex:1">
+          <div class="step-title">We launch your campaign professionally <span class="step-chev">›</span></div>
+          <div class="step-body">Photography, floor plans, listing copy and portal submission on realestate.com.au and domain.com.au &mdash; all managed by Propel RE. Marketing costs are paid directly by you, typically $1,500 to $3,000.
+            <div class="pills"><span class="pill">realestate.com.au</span><span class="pill">domain.com.au</span><span class="pill">Photography</span><span class="pill">Floor plan</span></div>
           </div>
         </div>
-
-        <!-- Step 2: Launch -->
-        <div class="how-visual" id="hv-1">
-          <div class="hv-card">
-            <div class="hv-label">Step 2</div>
-            <div class="hv-title">Campaign Launch</div>
-
-            <div class="hv-portals" style="margin-bottom:16px;">
-              <div class="hv-portal rea">
-                <div class="hv-portal-logo">R</div>
-                <div>
-                  <div class="hv-portal-name">realestate.com.au</div>
-                  <div class="hv-portal-status">Premier listing</div>
-                </div>
-                <div class="hv-live-dot"></div>
-              </div>
-              <div class="hv-portal domain">
-                <div class="hv-portal-logo">D</div>
-                <div>
-                  <div class="hv-portal-name">domain.com.au</div>
-                  <div class="hv-portal-status">Standard listing</div>
-                </div>
-                <div class="hv-live-dot"></div>
-              </div>
-            </div>
-
-            <div class="hv-costs">
-              <div class="hv-costs-hd">Marketing costs — paid by you directly</div>
-              <div class="hv-cost-item">
-                <span class="hv-cost-label">Photography and floor plan</span>
-                <span class="hv-cost-val">$400–800</span>
-              </div>
-              <div class="hv-cost-item">
-                <span class="hv-cost-label">REA Premier listing</span>
-                <span class="hv-cost-val">$800–1,500</span>
-              </div>
-              <div class="hv-cost-item">
-                <span class="hv-cost-label">Domain listing</span>
-                <span class="hv-cost-val">$200–400</span>
-              </div>
-              <div class="hv-cost-item">
-                <span class="hv-cost-label">Signboard</span>
-                <span class="hv-cost-val">$150–300</span>
-              </div>
-              <div class="hv-cost-total">
-                <span>Typical total</span>
-                <span>$1,500–3,000</span>
-              </div>
-            </div>
-
-
+      </div>
+      <div class="step" onclick="setStep(2)">
+        <div class="step-n">3</div>
+        <div style="flex:1">
+          <div class="step-title">You run open homes. Your agent handles the rest. <span class="step-chev">›</span></div>
+          <div class="step-body">You open the door and welcome buyers in. The check-in app captures every visitor automatically. All buyer communication, follow-ups and enquiries outside the inspection are handled by your agent.
+            <div class="pills"><span class="pill">Check-in app</span><span class="pill">Agent handles all follow-up</span><span class="pill">You just host</span></div>
           </div>
         </div>
-
-        <!-- Step 3: Open Homes -->
-        <div class="how-visual" id="hv-2">
-          <div class="hv-card">
-            <div class="hv-label">Step 3</div>
-            <div class="hv-title">Open Homes</div>
-            <div class="hv-checkin">
-              <div class="hv-checkin-hd">Check-in app · Live</div>
-              <div class="hv-attendee"><div class="hv-av">MK</div><div><div class="hv-att-name">Michael & Karen T.</div><div class="hv-att-sub">Checked in · 10:04am</div></div></div>
-              <div class="hv-attendee"><div class="hv-av">AL</div><div><div class="hv-att-name">Anna Lim</div><div class="hv-att-sub">Checked in · 10:07am</div></div></div>
-              <div class="hv-attendee"><div class="hv-av">JW</div><div><div class="hv-att-name">James Wilson</div><div class="hv-att-sub">Checked in · 10:09am</div></div></div>
-            </div>
-            <div class="hv-note">Your agent follows up every single visitor. You just host.</div>
+      </div>
+      <div class="step" onclick="setStep(3)">
+        <div class="step-n">4</div>
+        <div style="flex:1">
+          <div class="step-title">We manage every offer and negotiation <span class="step-chev">›</span></div>
+          <div class="step-body">All offers flow through our structured platform. Your agent handles every negotiation, counter-offer and price discussion. You review and approve &mdash; your agent executes.
+            <div class="pills"><span class="pill">Structured offers</span><span class="pill">Agent negotiates</span><span class="pill">You approve</span></div>
           </div>
         </div>
-
-        <!-- Step 4: Offers -->
-        <div class="how-visual" id="hv-3">
-          <div class="hv-card">
-            <div class="hv-label">Step 4</div>
-            <div class="hv-title">Offer Management</div>
-            <div class="hv-offers">
-              <div class="hv-offer best">
-                <div class="hv-offer-buyer">Anna Lim <span class="hv-offer-tag">Best offer</span></div>
-                <div class="hv-offer-amt">$1,425,000</div>
-                <div class="hv-offer-detail">Cash · 30 days · No conditions</div>
-              </div>
-              <div class="hv-offer">
-                <div class="hv-offer-buyer">Michael & Karen T.</div>
-                <div class="hv-offer-amt">$1,380,000</div>
-                <div class="hv-offer-detail">Pre-approved · 45 days</div>
-              </div>
-            </div>
-            <div class="hv-note">Your agent negotiates. You review and approve.</div>
-          </div>
-        </div>
-
-        <!-- Step 5: Settlement -->
-        <div class="how-visual" id="hv-4">
-          <div class="hv-card">
-            <div class="hv-label">Step 5</div>
-            <div class="hv-title">Sale to Settlement</div>
-            <div class="hv-items">
-              <div class="hv-item"><div class="hv-dot teal"></div><span>Offer accepted by your agent</span></div>
-              <div class="hv-item"><div class="hv-dot teal"></div><span>Contract prepared and signed</span></div>
-              <div class="hv-item"><div class="hv-dot teal"></div><span>Deposit held in trust</span></div>
-              <div class="hv-item"><div class="hv-dot teal"></div><span>Buyer due diligence period</span></div>
-              <div class="hv-item"><div class="hv-dot teal"></div><span>Settlement and key handover</span></div>
-            </div>
-            <div class="hv-note">Everything from contract to keys, handled by Propel RE.</div>
+      </div>
+      <div class="step" onclick="setStep(4)">
+        <div class="step-n">5</div>
+        <div style="flex:1">
+          <div class="step-title">Contracts and settlement fully handled <span class="step-chev">›</span></div>
+          <div class="step-body">Once the right offer is accepted, Propel RE manages everything through to settlement. You are done after the open homes.
+            <div class="pills"><span class="pill">Contracts</span><span class="pill">Deposit in trust</span><span class="pill">Settlement</span><span class="pill">Key handover</span></div>
           </div>
         </div>
       </div>
@@ -733,155 +334,88 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
   </div>
 </section>
 
-<!-- PLATFORM -->
-<!-- SAVING SECTION -->
-<div class="saving-section">
+<div class="saving">
   <div class="saving-inner">
-    <div class="saving-left">
-      <div class="saving-eyebrow">Example saving</div>
+    <div>
+      <div class="saving-ey">Example saving</div>
       <div class="saving-h">On a $1.3M sale</div>
-      <div class="saving-sub">Commission is the only variable. Marketing costs are the same regardless of who you sell with.</div>
+      <p class="saving-sub">Commission is the only variable. Marketing costs are the same regardless of who you sell with.</p>
     </div>
     <div class="saving-card">
       <div class="saving-row">
-        <div class="saving-col">
-          <div class="saving-col-label">Traditional agent @ 2.5%</div>
-          <div class="saving-col-num crossed">$32,500</div>
-        </div>
+        <div><div class="saving-lbl">Traditional agent @ 2.5%</div><div class="saving-num cross">$32,500</div></div>
         <div class="saving-vs">vs</div>
-        <div class="saving-col">
-          <div class="saving-col-label">Propel RE @ 1.1%</div>
-          <div class="saving-col-num green">$14,300</div>
-        </div>
+        <div><div class="saving-lbl">Propel RE @ 1.1%</div><div class="saving-num hi">$14,300</div></div>
       </div>
       <div class="saving-result">
-        <div class="saving-result-label">You keep</div>
-        <div class="saving-result-num">$18,200</div>
-        <div class="saving-result-sub">for your work.</div>
+        <div class="saving-rl">Your open homes earn you</div>
+        <div class="saving-rn">$18,200</div>
+        <div class="saving-rs">back in your pocket.</div>
       </div>
     </div>
   </div>
 </div>
 
-<section class="platform" id="platform">
+<section class="sec platform" id="platform">
   <div class="si">
     <div class="plat-top">
       <div>
         <span class="eyebrow reveal">The Platform</span>
         <h2 class="h2 reveal">Technology built<br><em>for sellers.</em></h2>
       </div>
-      <p class="sub reveal">Your entire campaign in one place. Every tool purpose-built for the Propel RE model so you always know what's happening, what to do next, and when to hand back to your agent.</p>
+      <p class="sub reveal">Your entire campaign in one place. Every tool purpose-built for the Propel RE model so you always know what is happening, what to do next, and when to hand back to your agent.</p>
     </div>
     <div class="feat-grid">
-      <div class="feat reveal"><div class="feat-ico">📊</div><div class="feat-title">Campaign Dashboard</div><div class="feat-desc">Live campaign progress, inspection registrations, offer status and agent activity — your entire sale in one clear view.</div></div>
+      <div class="feat reveal"><div class="feat-ico">📊</div><div class="feat-title">Campaign Dashboard</div><div class="feat-desc">Live campaign progress, inspection registrations, offer status and agent activity &mdash; your entire sale in one clear view.</div></div>
       <div class="feat reveal d1"><div class="feat-ico">📈</div><div class="feat-title">Listing Analytics</div><div class="feat-desc">Views, saves and enquiry data from realestate.com.au and domain.com.au, updated weekly via your agency portal reports.</div></div>
       <div class="feat reveal d2"><div class="feat-ico">💬</div><div class="feat-title">Agent Enquiry Management</div><div class="feat-desc">All buyer enquiries handled by your licensed agent. You see a summary of activity, never the raw inbox.</div></div>
       <div class="feat reveal d1"><div class="feat-ico">📲</div><div class="feat-title">Open Home Check-In</div><div class="feat-desc">Buyers self-register on arrival via tablet or phone. Names, emails, buyer type and finance status captured automatically.</div></div>
       <div class="feat reveal d2"><div class="feat-ico">📋</div><div class="feat-title">Offer Management</div><div class="feat-desc">Structured offer submissions with finance status, settlement terms and side-by-side comparison. Your agent manages all negotiations.</div></div>
-      <div class="feat reveal d3"><div class="feat-ico">✦</div><div class="feat-title">AI Guidance</div><div class="feat-desc">Ask anything about your sale. Open home prep, what to say to buyers, how to handle common questions in real time.</div></div>
+      <div class="feat reveal d3"><div class="feat-ico">✦</div><div class="feat-title">AI Guidance</div><div class="feat-desc">Ask anything about your sale. Open home prep, what to say to buyers, how to handle common questions &mdash; in real time.</div></div>
     </div>
   </div>
 </section>
 
-<!-- ARCHITECTURAL BREAK -->
-<div class="arch-break">
-  <div class="arch-break-inner">
-    <div class="arch-break-text reveal">
-      <h2 class="arch-bh">Owner-occupier campaigns.<br><em>A different kind of open home.</em></h2>
-      <p class="arch-bs">Buyers get to meet the people who actually lived in the home. That's something no traditional agency model can replicate and it often builds a connection that translates into stronger, more committed offers.</p>
-    </div>
-    <div class="arch-svg">
-      <svg viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg" fill="none" width="380" height="260">
-        <rect x="40" y="55" width="300" height="170" stroke="rgba(42,122,114,0.3)" stroke-width="1"/>
-        <line x1="40" y1="130" x2="340" y2="130" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-        <line x1="190" y1="55" x2="190" y2="225" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-        <rect x="60" y="72" width="95" height="65" stroke="rgba(42,122,114,0.4)" stroke-width="1" fill="rgba(42,122,114,0.05)"/>
-        <rect x="225" y="72" width="95" height="65" stroke="rgba(42,122,114,0.4)" stroke-width="1" fill="rgba(42,122,114,0.05)"/>
-        <rect x="152" y="150" width="76" height="75" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
-        <polygon points="190,18 340,55 40,55" stroke="rgba(42,122,114,0.45)" stroke-width="1" fill="rgba(13,31,60,0.6)"/>
-        <line x1="40" y1="225" x2="340" y2="225" stroke="rgba(42,122,114,0.45)" stroke-width="1.5"/>
-        <circle cx="190" cy="18" r="3" fill="rgba(42,122,114,0.8)"/>
-        <text x="190" y="245" fill="rgba(42,122,114,0.45)" font-size="8" font-family="monospace" text-anchor="middle" letter-spacing="2">SITE PLAN · CAMPAIGN ACTIVE</text>
-      </svg>
-    </div>
+<div class="arch">
+  <div class="arch-inner reveal">
+    <h2 class="arch-h">Owner-occupier campaigns.<br><em>A different kind of open home.</em></h2>
+    <p class="arch-p">Buyers get to meet the people who actually lived in the home. That is something no traditional agency model can replicate &mdash; and it often builds a connection that translates into stronger, more committed offers.</p>
   </div>
 </div>
 
-<!-- PROCESS -->
-
-
-<!-- OWNER'S GUIDE -->
-<section class="conduct" id="conduct">
+<section class="sec conduct" id="conduct">
   <div class="si">
     <span class="eyebrow reveal">Owner's Guide</span>
     <h2 class="h2 reveal">Know exactly<br><em>what to say.</em></h2>
-    <p class="sub reveal">Before your campaign goes live, you'll complete a simple owner's guide with your Propel RE agent. It covers what you can do, what to hand to your agent, and how to handle common buyer questions with confidence.</p>
-    <div class="conduct-grid">
-      <div class="ccard can reveal">
-        <div class="ccard-title"><span style="color:var(--teal)">✦</span> Your role as owner</div>
-        <div class="citem"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">✓</span>Host open homes and give buyers access to the property</div>
-        <div class="citem"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">✓</span>Welcome buyers warmly and walk them through at their pace</div>
-        <div class="citem"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">✓</span>Register buyers on arrival using the check-in app</div>
-        <div class="citem"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">✓</span>Answer factual questions about the property, features, renovations, the street</div>
-        <div class="citem"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">✓</span>Direct everything else to your agent price, offers, next steps</div>
+    <p class="sub reveal">Before your campaign goes live, you will complete a simple owner's guide with your Propel RE agent covering what you can do, what to hand to your agent, and how to handle common buyer questions with confidence.</p>
+    <div class="conduct-split reveal">
+      <div class="ccol can">
+        <div class="ccol-title"><span style="color:var(--teal)">✦</span> Your role as owner</div>
+        <div class="ci"><span class="ci-y">✓</span>Host open homes and give buyers access to the property</div>
+        <div class="ci"><span class="ci-y">✓</span>Welcome buyers warmly and walk them through at their pace</div>
+        <div class="ci"><span class="ci-y">✓</span>Register buyers on arrival using the check-in app</div>
+        <div class="ci"><span class="ci-y">✓</span>Answer factual questions about the property, features, renovations, the street</div>
+        <div class="ci"><span class="ci-y">✓</span>Refer price and offer questions to your agent</div>
       </div>
-      <div class="ccard cant reveal d1">
-        <div class="ccard-title"><span style="opacity:.35">○</span> Your agent handles everything else</div>
-        <div class="citem"><span style="opacity:.3;font-size:14px;flex-shrink:0;">→</span>All buyer enquiries and follow-up outside the inspection</div>
-        <div class="citem"><span style="opacity:.3;font-size:14px;flex-shrink:0;">→</span>Price, offers and negotiation of any kind</div>
-        <div class="citem"><span style="opacity:.3;font-size:14px;flex-shrink:0;">→</span>Whether there are other offers on the table</div>
-        <div class="citem"><span style="opacity:.3;font-size:14px;flex-shrink:0;">→</span>Contract terms, settlement dates and conditions</div>
-        <div class="citem"><span style="opacity:.3;font-size:14px;flex-shrink:0;">→</span>All negotiations from first offer through to exchange</div>
-      </div>
-    <div class="conduct-note reveal">
-      <div class="cn-ico">💬</div>
-      <div>
-        <div class="cn-title">The most useful sentence at any open home</div>
-        <div class="cn-text">"That's a great question our agent handles all of that and would love to chat with you. I'll make sure they follow up today." Simple, professional, and it works every time. Our platform gives you suggested responses for the most common buyer questions so you're never caught off guard.</div>
+      <div class="cdiv"></div>
+      <div class="ccol cant">
+        <div class="ccol-title"><span style="opacity:.28">○</span> Your agent handles</div>
+        <div class="ci"><span class="ci-n">→</span>All buyer enquiries and follow-up outside the inspection</div>
+        <div class="ci"><span class="ci-n">→</span>Price, offers and negotiation of any kind</div>
+        <div class="ci"><span class="ci-n">→</span>Whether there are other offers on the table</div>
+        <div class="ci"><span class="ci-n">→</span>Contract terms, settlement dates and conditions</div>
+        <div class="ci"><span class="ci-n">→</span>Everything from first offer through to exchange</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- IS IT RIGHT FOR YOU -->
-<section class="for-you" id="for-you">
-  <div class="si">
-    <span class="eyebrow reveal">Is It Right For You?</span>
-    <h2 class="h2 reveal">Built for confident sellers.<br><em>Not everyone.</em></h2>
-    <div class="for-honest reveal">
-      <div class="fh-title">An honest word before you decide</div>
-      <div class="fh-text">
-        <p>Selling your home is intense. There's a reason real estate agents have jobs it's a skilled, time-consuming process that involves documentation, negotiation, buyer management and a lot of emotional labour. <strong>If you'd rather someone else handle all of it, a traditional agent is absolutely the right choice.</strong></p>
-        <p>Propel RE suits sellers who genuinely want to be involved who get energy from the process rather than anxiety, who have time to show their home on weekends, and who want to understand every step of their sale rather than just receive the result. If that's you, we think you'll find this model not just more cost-effective but genuinely more satisfying.</p>
-      </div>
-    </div>
-    <div class="for-grid">
-      <div class="fcard yes reveal">
-        <div class="fcard-title"><span style="color:var(--teal)">✦</span> A strong fit if…</div>
-        <div class="fitem"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">✓</span>You're comfortable welcoming buyers into your home on weekends</div>
-        <div class="fitem"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">✓</span>You're happy for your agent to handle all communication and negotiation</div>
-        <div class="fitem"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">✓</span>You want visibility into your campaign without managing every detail</div>
-        <div class="fitem"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">✓</span>You trust the process and want professionals handling the hard parts</div>
-        <div class="fitem"><span style="color:var(--teal);font-size:14px;flex-shrink:0;">✓</span>You're selling a residential property in South East Queensland</div>
-      </div>
-      <div class="fcard no reveal d1">
-        <div class="fcard-title"><span style="opacity:.35">○</span> Probably not the right fit if…</div>
-        <div class="fitem"><span style="opacity:.3;font-size:14px;flex-shrink:0;">–</span>You'd prefer a fully hands-off experience from start to finish</div>
-        <div class="fitem"><span style="opacity:.3;font-size:14px;flex-shrink:0;">–</span>Weekend availability is limited or hard to predict</div>
-        <div class="fitem"><span style="opacity:.3;font-size:14px;flex-shrink:0;">–</span>The property has significant complexity estate, dispute or commercial</div>
-        <div class="fitem"><span style="opacity:.3;font-size:14px;flex-shrink:0;">–</span>You find buyer-facing conversations stressful rather than energising</div>
-        <div class="fitem"><span style="opacity:.3;font-size:14px;flex-shrink:0;">–</span>You want your agent to handle every conversation end to end</div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- CTA -->
 <section class="cta" id="consult">
   <div class="cta-inner">
-    <h2 class="cta-h2 reveal">Ready to take<br><em>ownership?</em></h2>
-    <p class="cta-sub reveal">Book a free 30-minute consultation with a Propel RE agent. We'll walk you through the model honestly, answer every question, and tell you upfront whether it's the right fit for your sale.</p>
-    <div class="book-form reveal">
+    <h2 class="cta-h reveal">Ready to take<br><em>ownership?</em></h2>
+    <p class="cta-sub reveal">Book a free 30-minute consultation with a Propel RE agent. We will walk you through the model honestly, answer every question, and tell you upfront whether it is the right fit for your sale.</p>
+    <div class="form reveal">
       <div class="f-row">
         <div class="f-grp"><label class="f-label">First Name</label><input class="f-input" type="text" placeholder="James"></div>
         <div class="f-grp"><label class="f-label">Last Name</label><input class="f-input" type="text" placeholder="Cobley"></div>
@@ -895,18 +429,21 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
         <label class="f-label">Estimated Property Value</label>
         <select class="f-input">
           <option value="" disabled selected>Select a range</option>
-          <option>$500k $750k</option><option>$750k $1M</option>
-          <option>$1M $1.5M</option><option>$1.5M $2M</option><option>$2M+</option>
+          <option>$500k – $750k</option>
+          <option>$750k – $1M</option>
+          <option>$1M – $1.5M</option>
+          <option>$1.5M – $2M</option>
+          <option>$2M+</option>
         </select>
       </div>
-      <button class="f-submit" onclick="this.textContent='✓ Booked we\'ll be in touch shortly';this.style.background='#3a5c3e';this.style.cursor='default';">Book My Free Consultation →</button>
-      <div class="f-note">No obligation · 30 minutes · We'll tell you honestly if it's the right fit</div>
+      <button class="f-submit" onclick="this.textContent='Booked &mdash; we will be in touch shortly';this.style.background='#2a5c30';this.style.cursor='default';">Book My Free Consultation →</button>
+      <div class="f-note">No obligation · 30 minutes · We will tell you honestly if it is the right fit</div>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="foot-inner">
+  <div class="foot-top">
     <div class="foot-logo">Propel <em>RE</em></div>
     <ul class="foot-links">
       <li><a href="#how">How It Works</a></li>
@@ -915,21 +452,17 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
       <li><a href="#consult">Book a Consultation</a></li>
     </ul>
   </div>
-  <div class="foot-legal">
-    Propel RE Pty Ltd · Licensed Real Estate Agency · Queensland · ABN 00 000 000 000<br>
-    © 2026 Propel RE · <a href="/cdn-cgi/l/email-protection#7a121f1616153a0a08150a1f16081f54191517541b0f" style="color:rgba(255,255,255,0.25);text-decoration:none;"><span class="__cf_email__" data-cfemail="abc3cec7c7c4ebdbd9c4dbcec7d9ce85c8c4c685cade">[email&#160;protected]</span></a>
-  </div>
+  <div class="foot-legal">Propel RE Pty Ltd · Licensed Real Estate Agency · Queensland · ABN 00 000 000 000<br>&copy; 2026 Propel RE · <a href="mailto:hello@propelre.com.au" style="color:rgba(255,255,255,0.22);text-decoration:none;">hello@propelre.com.au</a></div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-document.querySelectorAll('.reveal').forEach(el=>{
-  new IntersectionObserver(entries=>{
-    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
-  },{threshold:0.08}).observe(el);
+<script>
+document.querySelectorAll('.reveal').forEach(el => {
+  new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 }).observe(el);
 });
-function setStep(i){
-  document.querySelectorAll('.how-step').forEach((s,idx)=>s.classList.toggle('active',idx===i));
-  document.querySelectorAll('.how-visual').forEach((v,idx)=>v.classList.toggle('active',idx===i));
+function setStep(i) {
+  document.querySelectorAll('.step').forEach((s, idx) => s.classList.toggle('active', idx === i));
 }
 </script>
 </body>
