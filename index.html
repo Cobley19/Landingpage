@@ -24,12 +24,12 @@ body{font-family:'Epilogue',sans-serif;background:var(--off);color:var(--ink);ov
 .nav-cta:hover{background:var(--teal-light);}
 
 /* HERO */
-.hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;position:relative;overflow:hidden;padding:100px 48px 64px;}
+.hero{background:var(--navy);display:flex;align-items:center;position:relative;overflow:hidden;padding:120px 48px 72px;}
 .hero-orb{position:absolute;border-radius:50%;pointer-events:none;}
 .hero-orb.o1{width:600px;height:600px;background:rgba(42,122,114,0.09);right:-100px;top:-120px;filter:blur(90px);}
 .hero-orb.o2{width:400px;height:400px;background:rgba(30,58,106,0.45);left:-80px;bottom:-80px;filter:blur(90px);}
 .hero-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,0.016) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.016) 1px,transparent 1px);background-size:64px 64px;}
-.hero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 400px;gap:72px;align-items:center;}
+.hero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 420px;gap:64px;align-items:center;}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--teal-light);margin-bottom:22px;}
 .hero-dot{width:6px;height:6px;background:var(--teal);border-radius:50%;animation:pulse 2s infinite;}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
@@ -452,10 +452,10 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
       <li><a href="#consult">Book a Consultation</a></li>
     </ul>
   </div>
-  <div class="foot-legal">Propel RE Pty Ltd · Licensed Real Estate Agency · Queensland · ABN 00 000 000 000<br>&copy; 2026 Propel RE · <a href="mailto:hello@propelre.com.au" style="color:rgba(255,255,255,0.22);text-decoration:none;">hello@propelre.com.au</a></div>
+  <div class="foot-legal">Propel RE Pty Ltd · Licensed Real Estate Agency · Queensland · ABN 00 000 000 000<br>&copy; 2026 Propel RE · <a href="/cdn-cgi/l/email-protection#0c64696060634c7c7e637c69607e69226f6361226d79" style="color:rgba(255,255,255,0.22);text-decoration:none;"><span class="__cf_email__" data-cfemail="c4aca1a8a8ab84b4b6abb4a1a8b6a1eaa7aba9eaa5b1">[email&#160;protected]</span></a></div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 document.querySelectorAll('.reveal').forEach(el => {
   new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
