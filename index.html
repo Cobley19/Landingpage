@@ -85,7 +85,7 @@ section{padding:96px 48px;}
 .eyebrow{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:12px;}
 .h2{font-family:'Fraunces',serif;font-size:clamp(30px,3.5vw,50px);font-weight:600;line-height:1.1;letter-spacing:-1px;color:var(--navy);margin-bottom:14px;}
 .h2 em{font-style:italic;font-weight:300;color:var(--ink-60);}
-.sub{font-size:16px;font-weight:300;line-height:1.7;color:var(--ink-60);max-width:580px;}
+.sub{font-size:15px;font-weight:300;line-height:1.65;color:var(--ink-60);max-width:580px;}
 
 /* HONESTY */
 .honesty{background:var(--navy);padding:88px 48px;}
@@ -100,8 +100,8 @@ section{padding:96px 48px;}
 .arch-box{background:linear-gradient(135deg,#0a1628,#111f38);border-radius:14px;overflow:hidden;aspect-ratio:4/3;}
 
 /* HOW */
-.how{background:var(--white);}
-.how-grid{display:grid;grid-template-columns:1fr;gap:0;align-items:start;margin-top:56px;max-width:720px;}
+.how{background:var(--white);padding-top:60px;padding-bottom:60px;}
+.how-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:32px;}
 .how-step{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--border);cursor:pointer;}
 .how-step:last-child{border-bottom:none;}
 .step-num{width:34px;height:34px;flex-shrink:0;border-radius:50%;background:var(--off);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:14px;font-weight:600;color:var(--ink-60);transition:all .2s;margin-top:2px;}
@@ -340,6 +340,48 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
 .shc-stat:last-child{border-right:none;}
 .shc-val{font-family:'Fraunces',serif;font-size:20px;font-weight:700;color:#5dd6cc;line-height:1;}
 .shc-lbl{font-size:10px;color:rgba(255,255,255,0.35);margin-top:3px;}
+
+/* HOW VISUAL PANEL */
+.how-visual-panel{position:sticky;top:90px;align-self:start;}
+.how-visual{display:none;}
+.how-visual.active{display:block;animation:fadeUp .25s ease;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.hv-card{background:var(--navy);border-radius:14px;padding:24px;color:#fff;}
+.hv-label{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--teal-light);margin-bottom:8px;}
+.hv-title{font-family:'Fraunces',serif;font-size:22px;font-weight:600;color:#fff;margin-bottom:18px;}
+.hv-note{font-size:12px;color:rgba(255,255,255,0.45);margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.08);line-height:1.55;}
+/* Items list */
+.hv-items{display:flex;flex-direction:column;gap:10px;}
+.hv-item{display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(255,255,255,0.82);}
+.hv-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.hv-dot.teal{background:var(--teal);}
+.hv-dot.muted{background:rgba(255,255,255,0.2);}
+/* Portals */
+.hv-portals{display:flex;flex-direction:column;gap:10px;}
+.hv-portal{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:9px;padding:13px 15px;}
+.hv-portal-logo{width:34px;height:34px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;flex-shrink:0;}
+.hv-portal.rea .hv-portal-logo{background:#e8001d;}
+.hv-portal.domain .hv-portal-logo{background:#1352a0;}
+.hv-portal-name{font-size:13px;font-weight:500;color:#fff;}
+.hv-portal-status{font-size:11px;color:rgba(255,255,255,0.45);margin-top:2px;}
+.hv-live-dot{width:8px;height:8px;background:#27ae60;border-radius:50%;margin-left:auto;animation:blink 2s infinite;}
+/* Check-in */
+.hv-checkin{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);border-radius:9px;overflow:hidden;}
+.hv-checkin-hd{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-light);padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.07);}
+.hv-attendee{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.05);}
+.hv-attendee:last-child{border-bottom:none;}
+.hv-av{width:28px;height:28px;border-radius:50%;background:rgba(42,122,114,0.35);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;flex-shrink:0;}
+.hv-att-name{font-size:12px;font-weight:500;color:#fff;}
+.hv-att-sub{font-size:11px;color:rgba(255,255,255,0.4);margin-top:1px;}
+/* Offers */
+.hv-offers{display:flex;flex-direction:column;gap:9px;}
+.hv-offer{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);border-radius:9px;padding:13px 15px;}
+.hv-offer.best{background:rgba(42,122,114,0.15);border-color:rgba(42,122,114,0.35);}
+.hv-offer-buyer{font-size:12px;color:rgba(255,255,255,0.6);margin-bottom:4px;display:flex;align-items:center;gap:8px;}
+.hv-offer-tag{background:var(--teal);color:#fff;font-size:9px;font-weight:700;padding:2px 7px;border-radius:10px;}
+.hv-offer-amt{font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:#fff;line-height:1;}
+.hv-offer.best .hv-offer-amt{color:#5dd6cc;}
+.hv-offer-detail{font-size:11px;color:rgba(255,255,255,0.4);margin-top:3px;}
 </style>
 </head>
 <body>
@@ -396,11 +438,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
         <a href="#consult" class="btn-hero-p">Book a Free Consultation →</a>
         <a href="#how" class="btn-hero-g">See How It Works</a>
       </div>
-      <div class="hero-stats">
-        <div class="hs"><div class="hs-val">1.1%</div><div class="hs-lbl">Commission<br>incl. GST</div></div>
-        <div class="hs"><div class="hs-val">28</div><div class="hs-lbl">Day campaign<br>structure</div></div>
-        <div class="hs"><div class="hs-val">100%</div><div class="hs-lbl">Licensed agency<br>backed</div></div>
-      </div>
+
     </div>
 
     <!-- App preview card -->
@@ -441,11 +479,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
         </div>
       </div>
 
-      <div class="shc-stats">
-        <div class="shc-stat"><div class="shc-val">1.1%</div><div class="shc-lbl">commission incl. GST</div></div>
-        <div class="shc-stat"><div class="shc-val">28</div><div class="shc-lbl">day campaign</div></div>
-        <div class="shc-stat"><div class="shc-val">100%</div><div class="shc-lbl">licensed agency</div></div>
-      </div>
+
     </div>
   </div>
 </section>
@@ -498,6 +532,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
     <h2 class="h2 reveal">A new kind of agency.<br><em>Not a DIY kit.</em></h2>
     <p class="sub reveal">Propel RE remains your licensed agent of record. You take on the buyer-facing parts of the campaign. We provide the technology, the processes, and expert guidance behind every interaction.</p>
     <div class="how-grid">
+      <!-- Steps -->
       <div>
         <div class="how-step active" onclick="setStep(0)">
           <div class="step-num">1</div>
@@ -505,50 +540,120 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
         </div>
         <div class="how-step" onclick="setStep(1)">
           <div class="step-num">2</div>
-          <div><div class="step-title">We launch your campaign professionally</div><div class="step-desc">Photography, floor plans, listing copy, portal submission on realestate.com.au and domain.com.au all managed by Propel RE. Your listing goes live as an owner-occupier campaign, fully backed by a licensed agency.</div></div>
+          <div><div class="step-title">We launch your campaign professionally</div><div class="step-desc">Photography, floor plans, listing copy and portal submission on realestate.com.au and domain.com.au — all managed by Propel RE. Your listing goes live as an owner-occupier campaign, fully backed by a licensed agency.</div></div>
         </div>
         <div class="how-step" onclick="setStep(2)">
           <div class="step-num">3</div>
-          <div><div class="step-title">You run open homes. Your agent handles the rest.</div><div class="step-desc">You open the door and welcome buyers in. The platform logs every visitor automatically via the check-in app. All buyer communication outside the inspection enquiries, follow-ups, questions is handled by your licensed agent.</div></div>
+          <div><div class="step-title">You run open homes. Your agent handles the rest.</div><div class="step-desc">You open the door and welcome buyers in. The platform logs every visitor automatically via the check-in app. All buyer communication outside the inspection is handled by your licensed agent.</div></div>
         </div>
         <div class="how-step" onclick="setStep(3)">
           <div class="step-num">4</div>
-          <div><div class="step-title">We manage every offer and negotiation</div><div class="step-desc">All offers flow through our structured platform. Your Propel RE agent handles all negotiation, counter-offers and price discussions. You review we execute.</div></div>
+          <div><div class="step-title">We manage every offer and negotiation</div><div class="step-desc">All offers flow through our structured platform. Your Propel RE agent handles all negotiation, counter-offers and price discussions. You review — we execute.</div></div>
         </div>
         <div class="how-step" onclick="setStep(4)">
           <div class="step-num">5</div>
           <div><div class="step-title">Contracts and settlement fully handled</div><div class="step-desc">Once the right offer is accepted, Propel RE manages all contracts, documentation and transaction management through to settlement.</div></div>
         </div>
-        <div class="split-card">
-          <div class="split-lbl">Responsibility Split</div>
-          <div class="split-cols" style="grid-template-columns:1fr 1fr 1fr;">
-            <div class="split-col sc-you">
-              <div class="split-col-hd">Owner</div>
-              <div class="si-item"><span>🏠</span>Host open homes</div>
-              <div class="si-item"><span>📸</span>Property access</div>
-              <div class="si-item"><span>👋</span>Greet buyers at inspections</div>
-              <div class="si-item"><span>📲</span>Check-ins on arrival</div>
-            </div>
-            <div class="split-col sc-us">
-              <div class="split-col-hd">Licensed Agent</div>
-              <div class="si-item"><span>💬</span>All buyer communication</div>
-              <div class="si-item"><span>💰</span>Offers and negotiation</div>
-              <div class="si-item"><span>📝</span>Contracts and paperwork</div>
-              <div class="si-item"><span>🏦</span>Sale and settlement</div>
-            </div>
-            <div class="split-col" style="border-left:1px solid rgba(255,255,255,0.07);padding-left:12px;">
-              <div class="split-col-hd" style="color:rgba(255,255,255,0.5);">Platform</div>
-              <div class="si-item" style="color:rgba(255,255,255,0.65);"><span>📋</span>Listing and marketing</div>
-              <div class="si-item" style="color:rgba(255,255,255,0.65);"><span>📅</span>Inspection scheduling</div>
-              <div class="si-item" style="color:rgba(255,255,255,0.65);"><span>📊</span>Campaign tracking</div>
-              <div class="si-item" style="color:rgba(255,255,255,0.65);"><span>✦</span>AI guidance</div>
-            </div>
-          </div>
-          <div class="split-note"><strong>The platform is infrastructure.</strong> The licensed agent is responsible for the transaction. The owner opens the door.</div>
-        </div>
       </div>
 
-   </div>
+      <!-- Dynamic visual panel -->
+      <div class="how-visual-panel">
+        <!-- Step 1: Strategy -->
+        <div class="how-visual active" id="hv-0">
+          <div class="hv-card">
+            <div class="hv-label">Step 1</div>
+            <div class="hv-title">Strategy Session</div>
+            <div class="hv-items">
+              <div class="hv-item"><div class="hv-dot teal"></div><span>Pricing strategy set</span></div>
+              <div class="hv-item"><div class="hv-dot teal"></div><span>Comparable sales reviewed</span></div>
+              <div class="hv-item"><div class="hv-dot teal"></div><span>28-day campaign planned</span></div>
+              <div class="hv-item"><div class="hv-dot teal"></div><span>Owner's guide completed</span></div>
+              <div class="hv-item"><div class="hv-dot teal"></div><span>Disclosure forms signed</span></div>
+            </div>
+            <div class="hv-note">Your agent does the prep work. You show up informed.</div>
+          </div>
+        </div>
+
+        <!-- Step 2: Launch -->
+        <div class="how-visual" id="hv-1">
+          <div class="hv-card">
+            <div class="hv-label">Step 2</div>
+            <div class="hv-title">Campaign Launch</div>
+            <div class="hv-portals">
+              <div class="hv-portal rea">
+                <div class="hv-portal-logo">R</div>
+                <div>
+                  <div class="hv-portal-name">realestate.com.au</div>
+                  <div class="hv-portal-status">Premier listing · Live</div>
+                </div>
+                <div class="hv-live-dot"></div>
+              </div>
+              <div class="hv-portal domain">
+                <div class="hv-portal-logo">D</div>
+                <div>
+                  <div class="hv-portal-name">domain.com.au</div>
+                  <div class="hv-portal-status">Standard listing · Live</div>
+                </div>
+                <div class="hv-live-dot"></div>
+              </div>
+            </div>
+            <div class="hv-note">Photography, copy and portals — all handled by Propel RE before anything goes public.</div>
+          </div>
+        </div>
+
+        <!-- Step 3: Open Homes -->
+        <div class="how-visual" id="hv-2">
+          <div class="hv-card">
+            <div class="hv-label">Step 3</div>
+            <div class="hv-title">Open Homes</div>
+            <div class="hv-checkin">
+              <div class="hv-checkin-hd">Check-in app · Live</div>
+              <div class="hv-attendee"><div class="hv-av">MK</div><div><div class="hv-att-name">Michael & Karen T.</div><div class="hv-att-sub">Checked in · 10:04am</div></div></div>
+              <div class="hv-attendee"><div class="hv-av">AL</div><div><div class="hv-att-name">Anna Lim</div><div class="hv-att-sub">Checked in · 10:07am</div></div></div>
+              <div class="hv-attendee"><div class="hv-av">JW</div><div><div class="hv-att-name">James Wilson</div><div class="hv-att-sub">Checked in · 10:09am</div></div></div>
+            </div>
+            <div class="hv-note">Your agent follows up every single visitor. You just host.</div>
+          </div>
+        </div>
+
+        <!-- Step 4: Offers -->
+        <div class="how-visual" id="hv-3">
+          <div class="hv-card">
+            <div class="hv-label">Step 4</div>
+            <div class="hv-title">Offer Management</div>
+            <div class="hv-offers">
+              <div class="hv-offer best">
+                <div class="hv-offer-buyer">Anna Lim <span class="hv-offer-tag">Best offer</span></div>
+                <div class="hv-offer-amt">$1,425,000</div>
+                <div class="hv-offer-detail">Cash · 30 days · No conditions</div>
+              </div>
+              <div class="hv-offer">
+                <div class="hv-offer-buyer">Michael & Karen T.</div>
+                <div class="hv-offer-amt">$1,380,000</div>
+                <div class="hv-offer-detail">Pre-approved · 45 days</div>
+              </div>
+            </div>
+            <div class="hv-note">Your agent negotiates. You review and approve.</div>
+          </div>
+        </div>
+
+        <!-- Step 5: Settlement -->
+        <div class="how-visual" id="hv-4">
+          <div class="hv-card">
+            <div class="hv-label">Step 5</div>
+            <div class="hv-title">Sale to Settlement</div>
+            <div class="hv-items">
+              <div class="hv-item"><div class="hv-dot teal"></div><span>Offer accepted by your agent</span></div>
+              <div class="hv-item"><div class="hv-dot teal"></div><span>Contract prepared and signed</span></div>
+              <div class="hv-item"><div class="hv-dot teal"></div><span>Deposit held in trust</span></div>
+              <div class="hv-item"><div class="hv-dot muted"></div><span>Buyer due diligence period</span></div>
+              <div class="hv-item"><div class="hv-dot muted"></div><span>Settlement and key handover</span></div>
+            </div>
+            <div class="hv-note">Everything from contract to keys — handled by Propel RE.</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -598,69 +703,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
 </div>
 
 <!-- PROCESS -->
-<section class="process" id="process">
-  <div class="si">
-    <span class="eyebrow reveal" style="color:var(--teal-light)">The Campaign</span>
-    <h2 class="h2 reveal">Structured campaign.<br><em>Professional sale.</em></h2>
-    <p class="sub reveal">Your sale follows the same proven structure as any top-tier agency campaign with you as an active, informed participant at the front of house, and Propel RE managing everything behind it.</p>
-    <div class="proc-list">
-      <div class="pl-item done">
-        <div class="pl-left">
-          <div class="pl-icon">1</div>
-          <div class="pl-line"></div>
-        </div>
-        <div class="pl-content">
-          <div class="pl-week">Pre-Launch</div>
-          <div class="pl-title">Strategy &amp; Setup</div>
-          <div class="pl-desc">Agent briefing, pricing strategy, photography, disclosure forms and platform onboarding. Your owner's guide reviewed before anything goes live.</div>
-        </div>
-      </div>
-      <div class="pl-item done">
-        <div class="pl-left">
-          <div class="pl-icon">2</div>
-          <div class="pl-line"></div>
-        </div>
-        <div class="pl-content">
-          <div class="pl-week">Days 1–7</div>
-          <div class="pl-title">Campaign Launch</div>
-          <div class="pl-desc">Live on REA and Domain as an owner-occupier campaign. First open home weekend. Your agent manages all incoming enquiries from day one.</div>
-        </div>
-      </div>
-      <div class="pl-item now">
-        <div class="pl-left">
-          <div class="pl-icon">3</div>
-          <div class="pl-line"></div>
-        </div>
-        <div class="pl-content">
-          <div class="pl-week">Days 8–14</div>
-          <div class="pl-title">Building Momentum</div>
-          <div class="pl-desc">Second open homes. Private inspections. Mid-campaign review with your agent. Offers can be submitted at any time.</div>
-        </div>
-      </div>
-      <div class="pl-item">
-        <div class="pl-left">
-          <div class="pl-icon">4</div>
-          <div class="pl-line"></div>
-        </div>
-        <div class="pl-content">
-          <div class="pl-week">Days 15–27</div>
-          <div class="pl-title">Final Push</div>
-          <div class="pl-desc">Final open homes. Buyer due diligence. Your agent manages all offers and negotiations throughout.</div>
-        </div>
-      </div>
-      <div class="pl-item last">
-        <div class="pl-left">
-          <div class="pl-icon">5</div>
-        </div>
-        <div class="pl-content">
-          <div class="pl-week">When the right offer comes</div>
-          <div class="pl-title">Sale &amp; Settlement</div>
-          <div class="pl-desc">Your agent accepts the right offer on your behalf. Contracts, deposit and settlement all handled by Propel RE.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- OWNER'S GUIDE -->
 <section class="conduct" id="conduct">
@@ -781,6 +824,7 @@ document.querySelectorAll('.reveal').forEach(el=>{
 });
 function setStep(i){
   document.querySelectorAll('.how-step').forEach((s,idx)=>s.classList.toggle('active',idx===i));
+  document.querySelectorAll('.how-visual').forEach((v,idx)=>v.classList.toggle('active',idx===i));
 }
 </script>
 </body>
